@@ -244,10 +244,75 @@ const stackHighlights = [
 ];
 
 const heroProofs = [
-  "Full custom branding",
-  "Admin + Android",
-  "PostgreSQL secured",
-  "Export Excel/PDF",
+  "Dibangun dari pesantren",
+  "Beroperasi di Tasikmalaya",
+  "Data terenkripsi",
+  "EMIS ready",
+  "Branding pesantren Anda",
+];
+
+const whatsappDemoUrl =
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20pesantrenPro%20untuk%20%5Bnama%20pesantren%5D";
+
+const whatsappConversationUrl =
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20%5Bnama%5D%20dari%20Pondok%20Pesantren%20%5Bnama%5D.%20Kami%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20pesantrenPro.";
+
+const problemCards = [
+  {
+    title: "Rekap hafalan masih di buku folio.",
+    text: "Saat rapat pengurus, datanya harus dicari dulu. Kadang belum ketemu ketika keputusan harus dibuat.",
+    icon: FileText,
+  },
+  {
+    title: "Konfirmasi SPP menunggu bendahara.",
+    text: "Orang tua santri transfer lewat WhatsApp. Bukti masuk satu per satu, lalu direkap setelah jam kerja.",
+    icon: WalletCards,
+  },
+  {
+    title: "Wali santri bertanya berulang.",
+    text: "Kondisi anak, hafalan, kesehatan, dan tagihan ditanyakan lewat telepon. Pengurus menjawab satu per satu.",
+    icon: BellRing,
+  },
+  {
+    title: "Data santri tersebar di banyak tempat.",
+    text: "Excel pengurus, catatan ustadz, dan buku kepala santri sering tidak sama ketika dibutuhkan.",
+    icon: FileSpreadsheet,
+  },
+];
+
+const proofStats = [
+  "Digunakan aktif di Pondok Pesantren Al-Hasanah Cibeuti",
+  "Kawalu, Tasikmalaya",
+  "Berjalan sejak Januari 2026",
+  "Admin panel, Android, wallet, keuangan, hafalan, dan Diklat aktif diuji harian",
+];
+
+const faqs = [
+  {
+    question: "Apakah data santri kami aman?",
+    answer:
+      "Data disimpan di Supabase PostgreSQL dengan enkripsi berlapis. Informasi sensitif seperti NIK dan data keluarga dienkripsi di level database. PIN dompet santri tidak bisa dilihat admin, karena memang didesain begitu.",
+  },
+  {
+    question: "Kami sudah pakai sistem lain. Bisa pindah?",
+    answer:
+      "Bisa. Data dari sistem lama bisa diimpor lewat Excel atau CSV. Proses migrasi didampingi sampai data siap dipakai.",
+  },
+  {
+    question: "Apakah ada biaya tambahan jika santri bertambah?",
+    answer:
+      "Tidak ada biaya per santri. Harga flat per bulan mengikuti paket dan modul yang dipilih.",
+  },
+  {
+    question: "Apakah bisa dicoba dulu?",
+    answer:
+      "Bisa. Demo langsung tersedia secara online. Jika memungkinkan, pembahasan juga bisa dilakukan lewat kunjungan.",
+  },
+  {
+    question: "Siapa yang mengelola jika ada masalah teknis?",
+    answer:
+      "Developer aktif bisa dihubungi langsung via WhatsApp. Bukan helpdesk korporat yang harus menunggu tiket berhari-hari.",
+  },
 ];
 
 const serviceSegments = [
@@ -641,7 +706,7 @@ function AdminPanelShowcase() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="mt-12 grid gap-4 lg:grid-cols-3"
+          className="mt-12 flex snap-x gap-4 overflow-x-auto pb-4 md:grid md:overflow-visible md:pb-0 lg:grid-cols-3"
         >
           {adminScreens.map((screen, index) => (
             <motion.article
@@ -649,7 +714,7 @@ function AdminPanelShowcase() {
               variants={fadeUp}
               transition={{ duration: 0.62 }}
               whileHover={{ y: -7 }}
-              className={index === 0 ? "lg:col-span-2" : ""}
+              className={`min-w-[86vw] snap-center sm:min-w-[68vw] md:min-w-0 ${index === 0 ? "lg:col-span-2" : ""}`}
             >
               <div className="overflow-hidden rounded-lg border border-white/10 bg-white/8 shadow-2xl shadow-cyan-950/25 backdrop-blur">
                 <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
@@ -906,6 +971,199 @@ function BonusWebsiteSection() {
   );
 }
 
+function ProblemSection() {
+  return (
+    <section id="masalah" className="relative bg-white py-24 dark:bg-slate-900">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="mx-auto max-w-3xl text-center">
+          <Badge variant="outline" className="mb-4 border-emerald-700/25 text-emerald-900 dark:border-cyan-300/25 dark:text-cyan-100">
+            Sebelum ada sistem
+          </Badge>
+          <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
+            Ini yang biasanya terjadi sebelum data pesantren rapi.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Masalahnya bukan pengurus kurang teliti. Sering kali alat kerjanya memang belum menyatu.
+          </p>
+        </Reveal>
+
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="mt-12 grid gap-4 md:grid-cols-2"
+        >
+          {problemCards.map((problem) => {
+            const Icon = problem.icon;
+            return (
+              <motion.article
+                key={problem.title}
+                variants={fadeUp}
+                className="rounded-lg border border-emerald-900/10 bg-[#f3efe5] p-6 shadow-sm dark:border-cyan-300/15 dark:bg-slate-950"
+              >
+                <span className="mb-6 flex size-11 items-center justify-center rounded-lg bg-emerald-950 text-white dark:bg-cyan-300 dark:text-slate-950">
+                  <Icon className="size-5" />
+                </span>
+                <h3 className="text-2xl font-semibold leading-8">{problem.title}</h3>
+                <p className="mt-3 leading-7 text-slate-600 dark:text-slate-300">{problem.text}</p>
+              </motion.article>
+            );
+          })}
+        </motion.div>
+
+        <Reveal delay={0.08}>
+          <div className="mt-10 rounded-lg border border-emerald-900/10 bg-emerald-950 p-6 text-white shadow-xl shadow-emerald-950/10 dark:border-cyan-300/15 dark:bg-cyan-950">
+            <p className="mx-auto max-w-3xl text-center text-xl font-semibold leading-8">
+              pesantrenPro menyatukan semuanya. Bukan dengan menambah beban kerja, tapi dengan menggantikan cara lama yang melelahkan.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function SocialProofSection() {
+  return (
+    <section id="bukti" className="bg-[#f3efe5] py-24 dark:bg-slate-950">
+      <div className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:px-8">
+        <Reveal>
+          <Badge className="mb-4 bg-emerald-950 text-white dark:bg-cyan-300 dark:text-slate-950">
+            Bukti penggunaan
+          </Badge>
+          <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
+            Sudah dipakai dari kebutuhan nyata pesantren.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Sistem ini tidak dimulai dari proposal. Ia lahir dari pekerjaan harian yang perlu dibuat lebih tertib.
+          </p>
+        </Reveal>
+
+        <Reveal delay={0.08}>
+          <figure className="rounded-lg border border-emerald-900/10 bg-white p-6 shadow-xl shadow-emerald-950/10 dark:border-cyan-300/15 dark:bg-slate-900">
+            <blockquote className="text-2xl font-semibold leading-9 text-slate-950 dark:text-white">
+              &ldquo;Sistem ini membuat rekap Diklat yang biasanya 3 hari selesai jauh lebih cepat dan mudah diperiksa.&rdquo;
+            </blockquote>
+            <figcaption className="mt-6 border-t border-slate-200 pt-5 text-sm leading-6 text-slate-600 dark:border-slate-800 dark:text-slate-300">
+              Pengurus Pondok Pesantren Al-Hasanah Cibeuti, Kawalu, Tasikmalaya.
+            </figcaption>
+            <div className="mt-6 grid gap-2 sm:grid-cols-2">
+              {proofStats.map((stat) => (
+                <div key={stat} className="rounded-md bg-[#f3efe5] px-4 py-3 text-sm font-medium text-slate-700 dark:bg-slate-950 dark:text-slate-300">
+                  {stat}
+                </div>
+              ))}
+            </div>
+          </figure>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function DeveloperSection() {
+  return (
+    <section id="developer" className="bg-white py-24 dark:bg-slate-900">
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:px-8">
+        <Reveal>
+          <div className="overflow-hidden rounded-lg border border-emerald-900/10 bg-[#f3efe5] p-5 shadow-xl shadow-emerald-950/10 dark:border-cyan-300/15 dark:bg-slate-950">
+            <div className="aspect-[4/5] rounded-lg bg-[linear-gradient(145deg,rgba(6,78,59,0.95),rgba(20,83,45,0.72)),url('/dashboard_light.png')] bg-cover bg-center p-6 text-white">
+              <div className="flex h-full flex-col justify-end">
+                <p className="text-sm text-emerald-50/80">Developer pesantrenPro</p>
+                <h3 className="mt-2 text-3xl font-semibold">Nurdin Ramadhan</h3>
+                <p className="mt-3 max-w-sm leading-7 text-emerald-50/90">
+                  Santri aktif Pondok Pesantren Al-Hasanah Cibeuti, Tasikmalaya.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.08}>
+          <Badge variant="outline" className="mb-4 border-emerald-700/25 text-emerald-900 dark:border-cyan-300/25 dark:text-cyan-100">
+            Tentang developer
+          </Badge>
+          <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
+            Dibangun oleh santri, untuk pesantren.
+          </h2>
+          <div className="mt-6 space-y-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+            <p>
+              pesantrenPro dikembangkan oleh Nurdin Ramadhan, santri aktif di Pondok Pesantren Al-Hasanah Cibeuti, Tasikmalaya.
+            </p>
+            <p>
+              Sistem ini lahir dari kebutuhan nyata yang dirasakan sehari-hari. Bukan dari survei pasar atau asumsi vendor IT.
+            </p>
+            <p>
+              Setiap fitur diuji langsung dalam kegiatan pesantren. Dari Diklat Dzulhijjah sampai rekap hafalan mingguan.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function PricingSection() {
+  return (
+    <section id="harga" className="bg-[#f3efe5] py-24 dark:bg-slate-950">
+      <div className="mx-auto max-w-5xl px-4 text-center sm:px-6 lg:px-8">
+        <Reveal>
+          <Badge className="mb-4 bg-emerald-950 text-white dark:bg-cyan-300 dark:text-slate-950">
+            Sinyal biaya
+          </Badge>
+          <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
+            Implementasi yang masuk akal untuk pesantren.
+          </h2>
+          <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Biaya langganan bulanan pesantrenPro dirancang lebih kecil dari gaji satu staf administrasi, tetapi membantu pekerjaan yang biasanya membutuhkan 2-3 orang.
+          </p>
+          <p className="mx-auto mt-4 max-w-3xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+            Harga menyesuaikan ukuran pesantren dan modul yang diaktifkan. Diskusi dimulai tanpa komitmen.
+          </p>
+          <Button
+            render={<a href={whatsappDemoUrl} target="_blank" rel="noopener noreferrer" />}
+            nativeButton={false}
+            size="lg"
+            className="mt-8 h-12 bg-emerald-950 px-5 text-white shadow-xl shadow-emerald-950/15 hover:bg-emerald-900 dark:bg-cyan-300 dark:text-slate-950 dark:hover:bg-cyan-200"
+          >
+            Tanya Harga via WhatsApp
+            <Send className="size-4" />
+          </Button>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
+function FaqSection() {
+  return (
+    <section id="faq" className="bg-white py-24 dark:bg-slate-900">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="text-center">
+          <Badge variant="outline" className="mb-4 border-emerald-700/25 text-emerald-900 dark:border-cyan-300/25 dark:text-cyan-100">
+            Pertanyaan umum
+          </Badge>
+          <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
+            Hal yang biasanya ditanyakan pengurus.
+          </h2>
+        </Reveal>
+
+        <div className="mt-10 divide-y divide-slate-200 rounded-lg border border-emerald-900/10 bg-[#f3efe5] dark:divide-slate-800 dark:border-cyan-300/15 dark:bg-slate-950">
+          {faqs.map((faq) => (
+            <Reveal key={faq.question}>
+              <article className="p-6">
+                <h3 className="text-xl font-semibold leading-7">{faq.question}</h3>
+                <p className="mt-3 leading-7 text-slate-600 dark:text-slate-300">{faq.answer}</p>
+              </article>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export function LandingPage() {
   const { scrollYProgress } = useScroll();
   const heroY = useTransform(scrollYProgress, [0, 0.28], [0, -80]);
@@ -931,16 +1189,12 @@ export function LandingPage() {
           </a>
           <nav className="hidden items-center gap-7 text-sm font-medium text-slate-700 dark:text-slate-300 md:flex">
             {[
-              ["Layanan", "#layanan"],
-              ["Proses", "#proses"],
-              ["Admin Panel", "#admin-panel"],
-              ["Stack", "#stack"],
-              ["Export", "#export"],
-              ["Bonus", "#bonus-website"],
+              ["Masalah", "#masalah"],
               ["Ekosistem", "#ekosistem"],
-              ["Android", "#android"],
-              ["Security", "#keamanan"],
-              ["Custom", "#custom"],
+              ["Bukti", "#bukti"],
+              ["Developer", "#developer"],
+              ["Harga", "#harga"],
+              ["FAQ", "#faq"],
             ].map(([label, href]) => (
               <a key={label} href={href} className="transition-colors hover:text-emerald-800 dark:hover:text-cyan-200">
                 {label}
@@ -950,12 +1204,12 @@ export function LandingPage() {
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Button
-              render={<a href="#kontak" />}
+              render={<a href={whatsappConversationUrl} target="_blank" rel="noopener noreferrer" />}
               nativeButton={false}
               className="hidden bg-emerald-950 text-white shadow-lg shadow-emerald-950/15 hover:bg-emerald-900 dark:bg-cyan-300 dark:text-slate-950 dark:shadow-cyan-300/10 dark:hover:bg-cyan-200 sm:inline-flex"
             >
-              Diskusi
-              <ArrowRight className="size-4" />
+              WhatsApp
+              <Send className="size-4" />
             </Button>
           </div>
         </div>
@@ -973,24 +1227,24 @@ export function LandingPage() {
             <motion.div variants={fadeUp} transition={{ duration: 0.65 }}>
               <Badge className="mb-5 border-emerald-800/20 bg-white/72 text-emerald-950 shadow-sm backdrop-blur dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100">
                 <Sparkles className="size-3" />
-                Admin Panel + Android + Website + PostgreSQL
+                Sistem pesantren yang lahir dari pekerjaan harian
               </Badge>
             </motion.div>
             <motion.h1
               variants={fadeUp}
               transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-4xl text-5xl font-semibold leading-[1.02] tracking-normal text-slate-950 sm:text-7xl dark:text-white"
+              className="max-w-4xl text-[32px] font-semibold leading-[1.14] tracking-normal text-slate-950 sm:text-5xl lg:text-[56px] dark:text-white"
             >
-              Pesantren terasa lebih tertata saat sistemnya bekerja diam-diam.
+              Satu sistem untuk semua kegiatan pesantren. Dari hafalan sampai keuangan.
             </motion.h1>
             <motion.p
               variants={fadeUp}
               transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-              className="mt-6 max-w-2xl text-lg leading-8 text-slate-700 dark:text-slate-300"
+              className="mt-6 max-w-2xl text-lg leading-8 text-slate-700 sm:text-xl sm:leading-9 dark:text-slate-300"
             >
-              pesantrenPro menyatukan admin panel, aplikasi Android, website, backend, PostgreSQL, wallet, audit, E2EE, dan AI/RAG dalam satu ekosistem yang bisa mengikuti cara kerja pesantren.
+              pesantrenPro dibangun dari dalam pesantren. Admin panel, Android untuk wali, website publik, dan keamanan berlapis tersaji dalam satu ekosistem yang bisa disesuaikan penuh dengan nama, warna, dan cara kerja pesantren Anda.
             </motion.p>
-            <motion.div variants={fadeUp} className="mt-7 grid max-w-2xl grid-cols-2 gap-2 sm:grid-cols-4">
+            <motion.div variants={fadeUp} className="mt-7 flex max-w-3xl flex-wrap gap-2">
               {heroProofs.map((proof) => (
                 <div key={proof} className="rounded-lg border border-white/70 bg-white/62 px-3 py-3 text-sm font-semibold text-slate-800 shadow-sm backdrop-blur dark:border-cyan-300/15 dark:bg-slate-950/50 dark:text-cyan-100">
                   {proof}
@@ -999,22 +1253,22 @@ export function LandingPage() {
             </motion.div>
             <motion.div variants={fadeUp} className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button
-                render={<a href="#ekosistem" />}
+                render={<a href="#admin-panel" />}
                 nativeButton={false}
                 size="lg"
                 className="h-12 bg-emerald-950 px-5 text-white shadow-xl shadow-emerald-950/18 hover:bg-emerald-900 dark:bg-cyan-300 dark:text-slate-950 dark:hover:bg-cyan-200"
               >
-                Jelajahi Ekosistem
+                Lihat Demo Nyata
                 <ArrowRight className="size-4" />
               </Button>
               <Button
-                render={<a href="#keamanan" />}
+                render={<a href={whatsappDemoUrl} target="_blank" rel="noopener noreferrer" />}
                 nativeButton={false}
                 variant="outline"
                 size="lg"
                 className="h-12 border-emerald-900/18 bg-white/70 px-5 text-emerald-950 shadow-sm backdrop-blur hover:bg-white dark:border-cyan-300/28 dark:bg-slate-950/56 dark:text-cyan-100 dark:hover:bg-slate-900"
               >
-                Lihat Security
+                Hubungi Langsung
               </Button>
             </motion.div>
           </motion.div>
@@ -1023,13 +1277,7 @@ export function LandingPage() {
         </motion.div>
       </section>
 
-      <ExperienceBridge />
-      <ServiceDepthSection />
-      <ImplementationProcessSection />
-      <AdminPanelShowcase />
-      <TechnologyStackSection />
-      <ReportingExportSection />
-      <BonusWebsiteSection />
+      <ProblemSection />
 
       <section id="ekosistem" className="relative bg-white py-24 dark:bg-slate-900">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -1091,6 +1339,9 @@ export function LandingPage() {
           </Reveal>
         </div>
       </section>
+
+      <AdminPanelShowcase />
+      <SocialProofSection />
 
       <section id="android" className="bg-[#eef4ef] py-24 dark:bg-slate-950">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -1308,22 +1559,29 @@ export function LandingPage() {
         </div>
       </section>
 
+      <DeveloperSection />
+      <PricingSection />
+      <FaqSection />
+
       <section id="kontak" className="bg-emerald-950 py-24 text-white dark:bg-cyan-950">
         <Reveal className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl">
             <Badge className="mb-5 bg-white/12 text-white">
               <Network className="size-3" />
-              Admin panel + Android + website + PostgreSQL
+              Percakapan awal
             </Badge>
             <h2 className="text-4xl font-semibold tracking-normal sm:text-6xl">
-              Siapkan demo pesantrenPro untuk penawaran berikutnya.
+              Mulai dari percakapan, bukan komitmen.
             </h2>
             <p className="mt-5 text-lg leading-8 text-emerald-50/80">
-              Landing page ini menegaskan bahwa sistem dapat dibawa ke pesantren lain dengan branding dan fitur yang mengikuti kebutuhan lembaga. Untuk informasi lebih lanjut hubungi developer pesantrenPro.
+              Tidak perlu langsung memutuskan. Ceritakan kondisi pesantren Anda: berapa santri, sistem apa yang sedang dipakai, dan apa yang paling menyulitkan pengurus saat ini.
+            </p>
+            <p className="mt-4 text-lg leading-8 text-emerald-50/80">
+              Dari sana, baru kita lihat apakah pesantrenPro cocok atau tidak.
             </p>
             <div className="mx-auto mt-8 grid max-w-2xl gap-3 sm:grid-cols-2">
               <a
-                href="https://wa.me/6281804886112"
+                href={whatsappConversationUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-lg border border-white/15 bg-white/10 px-5 py-4 text-left shadow-lg shadow-black/10 backdrop-blur transition hover:bg-white/15"
@@ -1341,12 +1599,12 @@ export function LandingPage() {
             </div>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Button
-                render={<a href="https://wa.me/6281804886112" target="_blank" rel="noopener noreferrer" />}
+                render={<a href={whatsappConversationUrl} target="_blank" rel="noopener noreferrer" />}
                 nativeButton={false}
                 size="lg"
                 className="h-12 bg-white px-5 text-emerald-950 shadow-xl shadow-black/15 hover:bg-emerald-50 dark:text-cyan-950"
               >
-                Hubungi WhatsApp
+                Mulai Percakapan via WhatsApp
                 <Send className="size-4" />
               </Button>
               <Button
@@ -1370,6 +1628,16 @@ export function LandingPage() {
           <p>Ekosistem digital pesantren yang dapat disesuaikan dengan kebijakan lembaga.</p>
         </div>
       </footer>
+
+      <a
+        href={whatsappConversationUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-4 right-4 z-50 inline-flex items-center gap-2 rounded-lg bg-emerald-950 px-4 py-3 text-sm font-semibold text-white shadow-2xl shadow-emerald-950/25 transition hover:bg-emerald-900 dark:bg-cyan-300 dark:text-slate-950 dark:hover:bg-cyan-200"
+      >
+        <Send className="size-4" />
+        081804886112
+      </a>
     </main>
   );
 }
