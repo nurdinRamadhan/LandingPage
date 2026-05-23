@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "pesantrenPro | Sistem Digital Pesantren",
   description:
-    "Landing page penawaran ekosistem admin panel, aplikasi Android, backend, PostgreSQL, dan keamanan berlapis untuk pesantren.",
+    "Ekosistem admin panel, aplikasi Android, backend, PostgreSQL, AI, dan keamanan berlapis untuk pesantren.",
 };
 
 export default function RootLayout({

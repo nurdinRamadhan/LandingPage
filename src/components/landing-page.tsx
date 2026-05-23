@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   ArrowRight,
@@ -29,7 +30,6 @@ import {
   ShieldCheck,
   Smartphone,
   Sparkles,
-  TerminalSquare,
   UsersRound,
   WalletCards,
   Wrench,
@@ -76,7 +76,7 @@ const ecosystem = [
   {
     title: "Admin Panel",
     icon: PanelTop,
-    text: "Pusat kerja pengurus untuk data induk, EMIS, akademik, kesantrian, keuangan, alumni, inventaris, notifikasi, audit, dan AI internal.",
+    text: "Pusat kerja operasional untuk data induk, EMIS, akademik, kesantrian, keuangan, alumni, inventaris, notifikasi, audit, dan AI internal.",
   },
   {
     title: "Android",
@@ -107,29 +107,48 @@ const screenshots = [
 
 const androidFeatureGroups = [
   {
-    title: "Wali Santri",
+    title: "Monitoring Wali",
     icon: UsersRound,
-    items: ["Profil santri", "Hafalan Quran", "Hafalan kitab", "Pelanggaran", "Kesehatan", "Perizinan", "Tagihan dan SPP", "Riwayat notifikasi"],
+    items: ["Daftar dan profil santri", "Hafalan Quran", "Murojaah", "Hafalan kitab", "Catatan kedisiplinan", "Rekam medis/UKS", "Perizinan dan status kembali", "Prestasi santri"],
   },
   {
     title: "Pembayaran & Dompet",
     icon: CreditCard,
-    items: ["Pembayaran online", "Donasi", "Top up Dompet Santri", "Aktivasi wallet", "PIN dompet", "Limit transaksi", "Approval transaksi besar", "Dispute wallet"],
+    items: ["Tagihan dan SPP", "QRIS, GoPay, VA bank", "Alfamart/Indomaret", "Donasi infaq/wakaf/shadaqah", "Top up Dompet Santri", "Aktivasi wallet dan PIN", "Limit dan approval", "Dispute transaksi"],
   },
   {
     title: "Fitur Publik Islami",
     icon: BookOpenCheck,
-    items: ["Al-Qur'an digital", "Daftar surah", "Daftar juz", "Detail ayat", "Terjemahan", "Pencarian surah", "Jadwal sholat", "Berita pesantren"],
+    items: ["Al-Qur'an digital", "Surah dan juz", "Terjemahan", "Bookmark", "Audio murottal dan qori", "Jadwal sholat dan pengingat", "Cuaca", "Arah kiblat"],
   },
   {
     title: "Alumni & Kantin",
     icon: Network,
-    items: ["Forum alumni", "Direktori alumni", "Profil alumni", "Chat alumni E2EE", "Notifikasi alumni", "Scan QR/NFC kantin", "Riwayat merchant", "Settlement kantin"],
+    items: ["Registrasi alumni", "Profil dan direktori alumni", "Forum alumni", "Follow, komentar, reaction", "Laporan konten", "Chat alumni E2EE", "Direct reply terenkripsi", "Scan QR/NFC kantin"],
   },
   {
-    title: "Notifikasi & Offline",
+    title: "AI, Notifikasi & Offline",
     icon: BellRing,
-    items: ["Push notification", "Token FCM single-owner", "Queue notifikasi", "Direct reply E2EE", "Offline outbox", "Cache terenkripsi", "Retry saat jaringan pulih"],
+    items: ["Tanya AI publik/wali", "Berita pesantren", "Hadis", "Kalender Islam", "Kitab kuning", "Panduan ibadah", "Pusat notifikasi", "Cache terenkripsi dan offline outbox"],
+  },
+];
+
+const androidAssurancePoints = [
+  {
+    title: "Wali tidak perlu bertanya satu per satu.",
+    text: "Profil, hafalan, murojaah, kitab, pelanggaran, kesehatan, perizinan, prestasi, tagihan, dan notifikasi tampil sesuai santri yang terhubung dengan akun wali.",
+  },
+  {
+    title: "Aplikasi monitoring, bukan pintu mengubah data pesantren.",
+    text: "Data resmi tetap dicatat melalui sistem administrasi. Android menampilkan data kepada pihak yang berhak, sehingga alur pesantren tetap rapi dan tidak bercampur dengan akses wali.",
+  },
+  {
+    title: "Keuangan dan dompet tetap online-first.",
+    text: "SPP, donasi, top up, saldo, kantin, settlement, dan status pembayaran divalidasi backend agar ledger, Midtrans, risk rule, dan audit tetap menjadi sumber kebenaran.",
+  },
+  {
+    title: "Tetap berguna saat koneksi lemah.",
+    text: "Modul non-keuangan dapat memakai cache lokal terenkripsi dan TTL, sementara pembayaran dan transaksi sensitif tetap meminta koneksi agar tidak terjadi data palsu.",
   },
 ];
 
@@ -138,22 +157,22 @@ const adminScreens = [
     src: "/dashboard_light.png",
     darkSrc: "/dashboard_dark.png",
     title: "Dashboard Operasional",
-    text: "Ringkasan kondisi pesantren, angka penting, indikator kerja, dan akses cepat untuk pimpinan dan pengurus.",
+    text: "Ringkasan santri, kas, kegiatan, grafik arus kas, serta peringatan global seperti tunggakan SPP dan kesehatan.",
   },
   {
     src: "/santri.png",
     title: "Data Santri EMIS",
-    text: "Biodata santri, akun wali, kesiapan EMIS, geocode, QR identitas, dan ekspor Excel melalui alur backend.",
+    text: "Registrasi EMIS lengkap, akun wali otomatis, validasi NIK/KK, geocode, peta, QR identitas, profil, dan ekspor Excel aman.",
   },
   {
     src: "/tagihan.png",
     title: "Keuangan & SPP",
-    text: "Tagihan santri, pembayaran, Midtrans, status lunas, export Excel, dan riwayat pembayaran.",
+    text: "Tagihan, pembayaran manual, Midtrans, infaq/wakaf/shadaqah/donasi, pengeluaran, status transaksi, dan export Excel multi-sheet.",
   },
   {
     src: "/log-keuangan.png",
     title: "Buku Besar Keuangan",
-    text: "Riwayat transaksi permanen berlabel audit locked, sehingga koreksi dilakukan dengan prosedur, bukan hapus jejak.",
+    text: "Riwayat transaksi permanen berlabel Audit Locked dengan tanggal Masehi/Hijriah, pencatat, metode, nominal, status, dan order ID.",
   },
   {
     src: "/scanqr.png",
@@ -163,7 +182,7 @@ const adminScreens = [
   {
     src: "/Ai-fitur.png",
     title: "AI Intelligence Suite",
-    text: "Analysis, AI Agent dengan konfirmasi, RAG Decision, laporan, serta knowledge base internal.",
+    text: "Analysis, AI Agent dengan konfirmasi manual, RAG Decision, knowledge base, query log, serta laporan Excel/PDF dari bahasa natural.",
   },
 ];
 
@@ -171,32 +190,55 @@ const adminFeatureGroups = [
   {
     title: "Data Induk & EMIS",
     icon: UsersRound,
-    items: ["Registrasi santri EMIS", "Akun wali otomatis", "Validasi kesiapan EMIS", "Geocode dan persebaran santri", "QR identitas", "Ekspor Excel EMIS"],
+    items: ["Registrasi EMIS lengkap", "Akun wali otomatis", "Validasi NIK/KK dan data keluarga", "Geocode dan peta persebaran", "QR identitas", "Ekspor Excel EMIS via backend"],
   },
   {
     title: "Kesantrian & Akademik",
     icon: BookOpenCheck,
-    items: ["Pelanggaran", "Perizinan", "Kesehatan UKS", "Ziyadah Tahfidz", "Murojaah", "Hafalan kitab", "Ulangan mingguan", "Laporan nilai"],
+    items: ["Pelanggaran dan poin pembinaan", "Perizinan dan status kembali", "Kesehatan UKS", "Ziyadah Tahfidz", "Murojaah", "Hafalan kitab", "Ulangan mingguan", "Laporan nilai"],
   },
   {
     title: "Keuangan & Dompet",
     icon: WalletCards,
-    items: ["Tagihan dan SPP", "Buku besar keuangan", "Pengeluaran", "Donasi", "Dompet Santri", "Kantin merchant", "Settlement", "Dispute dan rekonsiliasi"],
+    items: ["Tagihan dan SPP", "Buku besar Audit Locked", "Pengeluaran dan bukti", "Infaq/wakaf/shadaqah/donasi", "Dompet Santri ledger-first", "Kantin merchant dan outlet", "Settlement merchant", "Dispute, risk event, rekonsiliasi"],
   },
   {
-    title: "Operasional Lembaga",
+    title: "Operasional Pesantren",
     icon: MonitorCheck,
-    items: ["Profil pesantren", "Manajemen admin", "Diklat dan pasaran", "Inventaris aset", "Informasi dan berita", "Notifikasi push", "Log aktivitas"],
+    items: ["Profil pesantren dan struktur", "Manajemen admin dan role", "Batas gender/jurusan", "Diklat dan pasaran", "Inventaris aset", "Informasi dan berita", "Notifikasi push", "Log aktivitas"],
   },
   {
     title: "Alumni & Komunitas",
     icon: Network,
-    items: ["Manajemen alumni", "Forum moderation", "Forum reports", "Chat monitoring metadata", "E2EE tanpa akses isi pesan"],
+    items: ["Manajemen data alumni", "Forum alumni", "Moderasi dan laporan konten", "Monitoring metadata chat", "E2EE tanpa akses isi pesan"],
   },
   {
     title: "AI, Audit, Backend",
     icon: ShieldCheck,
-    items: ["AI Analysis", "AI Agent konfirmasi manual", "RAG Knowledge Base", "Audit aktivitas", "Dompet security audit", "Backend Command Center"],
+    items: ["AI Analysis", "AI Agent wajib konfirmasi", "RAG Decision role tertentu", "Laporan Excel/PDF", "Audit aktivitas", "Audit keamanan Dompet", "Backend Command Center", "Private audit dan safe repair"],
+  },
+];
+
+const adminWorkflowCards = [
+  {
+    title: "EMIS dari input sampai laporan",
+    icon: FileSpreadsheet,
+    text: "Kesantrian mengisi biodata lengkap, sistem memvalidasi data penting, membuat akun wali, memproses geocode, menampilkan kesiapan EMIS, lalu mengekspor Excel lewat jalur backend yang tercatat.",
+  },
+  {
+    title: "Keuangan tidak bergantung screenshot",
+    icon: WalletCards,
+    text: "Bendahara melihat tagihan, pembayaran manual, Midtrans, donasi, pengeluaran, dan buku besar Audit Locked. Status digital mengikuti webhook, bukan bukti kiriman WhatsApp.",
+  },
+  {
+    title: "Dompet Santri diawasi seperti sistem finansial",
+    icon: ShieldCheck,
+    text: "Saldo berubah lewat ledger, bukan edit angka. Ada QR opaque, limit, device kantin, settlement, dispute, risk event, rekonsiliasi, hash-chain, freeze switch, dan audit keamanan.",
+  },
+  {
+    title: "Super admin punya control tower",
+    icon: Database,
+    text: "Backend Command Center menampilkan health score, incident, timeline, token FCM, antrean Midtrans, private audit log, rekomendasi, dan safe repair manual untuk masalah operasional.",
   },
 ];
 
@@ -244,11 +286,12 @@ const stackHighlights = [
 ];
 
 const heroProofs = [
-  "Dibangun dari pesantren",
-  "Beroperasi di Tasikmalaya",
-  "Data terenkripsi",
+  "AI Analysis",
+  "AI Agent konfirmasi admin",
+  "RAG dokumen pesantren",
   "EMIS ready",
-  "Branding pesantren Anda",
+  "Android wali dan kantin",
+  "Audit dan keamanan berlapis",
 ];
 
 const whatsappDemoUrl =
@@ -260,7 +303,7 @@ const whatsappConversationUrl =
 const problemCards = [
   {
     title: "Rekap hafalan masih di buku folio.",
-    text: "Saat rapat pengurus, datanya harus dicari dulu. Kadang belum ketemu ketika keputusan harus dibuat.",
+    text: "Saat rapat pesantren, datanya harus dicari dulu. Kadang belum ketemu ketika keputusan harus dibuat.",
     icon: FileText,
   },
   {
@@ -270,12 +313,12 @@ const problemCards = [
   },
   {
     title: "Wali santri bertanya berulang.",
-    text: "Kondisi anak, hafalan, kesehatan, dan tagihan ditanyakan lewat telepon. Pengurus menjawab satu per satu.",
+    text: "Kondisi anak, hafalan, kesehatan, dan tagihan ditanyakan lewat telepon. Tim pesantren harus menjawab satu per satu.",
     icon: BellRing,
   },
   {
     title: "Data santri tersebar di banyak tempat.",
-    text: "Excel pengurus, catatan ustadz, dan buku kepala santri sering tidak sama ketika dibutuhkan.",
+    text: "File Excel, catatan ustadz, dan buku kepala santri sering tidak sama ketika dibutuhkan.",
     icon: FileSpreadsheet,
   },
 ];
@@ -291,7 +334,7 @@ const faqs = [
   {
     question: "Apakah data santri kami aman?",
     answer:
-      "Data disimpan di Supabase PostgreSQL dengan enkripsi berlapis. Informasi sensitif seperti NIK dan data keluarga dienkripsi di level database. PIN dompet santri tidak bisa dilihat admin, karena memang didesain begitu.",
+      "Akses data dibatasi dengan Supabase Auth, relasi wali-santri, RLS, RPC terkontrol, audit, dan cache Android terenkripsi untuk data sensitif. PIN Dompet Santri tidak disimpan sebagai angka asli, melainkan verifier kriptografis.",
   },
   {
     question: "Kami sudah pakai sistem lain. Bisa pindah?",
@@ -323,7 +366,7 @@ const serviceSegments = [
   },
   {
     title: "Custom Admin Panel & Android",
-    text: "Menu, role, branding, modul, website, dan tampilan disesuaikan dengan pesantren terkait. Bukan sistem satu bentuk yang dipaksakan untuk semua lembaga.",
+    text: "Menu, role, branding, modul, website, dan tampilan disesuaikan dengan kebutuhan masing-masing pesantren. Bukan satu bentuk yang dipaksakan untuk semua.",
     icon: PanelTop,
   },
   {
@@ -341,7 +384,7 @@ const serviceSegments = [
 const implementationSteps = [
   {
     title: "Assessment",
-    text: "Membaca struktur pesantren, role pengurus, data santri, kebutuhan EMIS, keuangan, dan kebiasaan kerja yang sudah berjalan.",
+    text: "Membaca struktur pesantren, role operasional, data santri, kebutuhan EMIS, keuangan, dan kebiasaan kerja yang sudah berjalan.",
   },
   {
     title: "Desain Alur",
@@ -362,10 +405,10 @@ const implementationSteps = [
 ];
 
 const bonusWebsiteFeatures = [
-  "Website profil pesantren dengan branding resmi lembaga",
+  "Website profil pesantren dengan branding resmi",
   "Halaman program, pendaftaran, berita, kontak, dan galeri",
   "Desain responsif dark/light mode sesuai identitas pesantren",
-  "Dapat dikembangkan menjadi portal publik yang terhubung ke ekosistem sistem",
+  "Dapat dikembangkan menjadi portal publik yang terhubung ke ekosistem digital",
 ];
 
 const reportingFeatures = [
@@ -393,12 +436,12 @@ const reportingFeatures = [
 
 const impactMoments = [
   {
-    title: "Pagi hari pengurus membuka dashboard.",
+    title: "Pagi hari dashboard menjadi pusat kendali.",
     text: "Yang terlihat bukan sekadar angka, tetapi pekerjaan mana yang perlu didahulukan: data santri, tagihan, notifikasi, audit, atau antrian backend.",
   },
   {
     title: "Wali cukup memantau dari Android.",
-    text: "Profil, hafalan, pelanggaran, kesehatan, tagihan, donasi, dan dompet tersaji sesuai hak akses tanpa mengubah alur kerja pengurus.",
+    text: "Profil, hafalan, pelanggaran, kesehatan, tagihan, donasi, dan dompet tersaji sesuai hak akses tanpa mengubah alur kerja internal pesantren.",
   },
   {
     title: "Saat data dipertanyakan, jejaknya ada.",
@@ -406,22 +449,110 @@ const impactMoments = [
   },
 ];
 
-const securityLayers = [
-  "Role-Based Access Control dan Row Level Security",
-  "Secure RPC untuk santri, EMIS, wallet, dan workflow sensitif",
-  "Edge Function untuk pembayaran, notifikasi, AI, dan aksi berisiko",
-  "Audit log permanen serta ledger append-only untuk transaksi",
-  "Chat alumni E2EE: server menyimpan metadata dan ciphertext",
-  "Android Keystore, AES/GCM, Ed25519, Argon2id, nonce, idempotency",
-  "Backend Command Center: health score, incident, diagnostics, safe repair",
-  "Sanitasi data sebelum AI/RAG agar informasi sensitif tidak bocor",
+const securityControlCards = [
+  {
+    title: "Android Keystore",
+    label: "Device root of trust",
+    icon: Smartphone,
+    text: "Kunci sensitif dibungkus oleh sistem keamanan perangkat, bukan sekadar disimpan sebagai file biasa di aplikasi.",
+  },
+  {
+    title: "AES/GCM",
+    label: "Authenticated encryption",
+    icon: LockKeyhole,
+    text: "Cache lokal, outbox, dan material sensitif dienkripsi sekaligus divalidasi agar perubahan data tidak diterima diam-diam.",
+  },
+  {
+    title: "Ed25519",
+    label: "Wallet signature",
+    icon: Fingerprint,
+    text: "Operasi Dompet Santri memakai tanda tangan perangkat untuk membantu mencegah request transaksi palsu.",
+  },
+  {
+    title: "Online Authority",
+    label: "Backend as source of truth",
+    icon: Server,
+    text: "Pembayaran, top up, kantin, saldo, settlement, dan status transaksi tetap divalidasi server agar tidak percaya pada data lokal.",
+  },
+  {
+    title: "Argon2id",
+    label: "PIN verifier",
+    icon: KeyRound,
+    text: "PIN Dompet Santri tidak disimpan sebagai angka asli, tetapi sebagai verifier kriptografis dengan salt dan parameter KDF.",
+  },
+  {
+    title: "E2EE Alumni Chat",
+    label: "No plaintext server",
+    icon: Send,
+    text: "Isi chat alumni dirancang terenkripsi end-to-end. Server menyimpan metadata dan ciphertext, bukan isi pesan terbuka.",
+  },
+  {
+    title: "Hash Chain Ledger",
+    label: "Tamper-evident finance",
+    icon: WalletCards,
+    text: "Riwayat Dompet Santri tidak hanya berupa saldo akhir, tetapi ledger yang dapat direkonsiliasi dan diperiksa integritasnya.",
+  },
+  {
+    title: "RBAC + RLS",
+    label: "Database access control",
+    icon: Database,
+    text: "Hak akses mengikuti role pengguna dan relasi data. Wali, alumni, kantin, admin, dan service process tidak berada di ruang akses yang sama.",
+  },
+  {
+    title: "Secure RPC",
+    label: "Controlled mutation",
+    icon: ShieldCheck,
+    text: "Aksi sensitif tidak diserahkan ke UI. Perubahan data penting lewat fungsi backend dengan validasi role, relasi bisnis, dan audit.",
+  },
+  {
+    title: "Edge Functions",
+    label: "Secret isolation",
+    icon: Server,
+    text: "Webhook pembayaran, push notification, wallet, dan proses berisiko berjalan di backend agar secret provider tidak ditanam di aplikasi.",
+  },
+  {
+    title: "Nonce + Idempotency",
+    label: "Replay protection",
+    icon: QrCode,
+    text: "Request transaksi memakai nonce, challenge, expiry, dan idempotency key agar pengulangan request tidak membuat transaksi ganda.",
+  },
+  {
+    title: "Audit Log Permanen",
+    label: "Forensic trail",
+    icon: MonitorCheck,
+    text: "Aktivitas admin dan perubahan finansial meninggalkan jejak yang dapat diperiksa kembali saat terjadi selisih, komplain, atau audit.",
+  },
+  {
+    title: "Backend Command Center",
+    label: "Operational monitoring",
+    icon: MonitorCheck,
+    text: "Health score, diagnostics, incident, repair workflow, reconciliation, dan maintenance membantu masalah backend terdeteksi lebih cepat.",
+  },
+  {
+    title: "AI/RAG Sanitization",
+    label: "Safe intelligence",
+    icon: Sparkles,
+    text: "Data yang masuk ke AI dibatasi dan disanitasi agar fitur analisis tidak menjadi jalur bocor untuk PIN, secret, atau informasi sensitif.",
+  },
+  {
+    title: "FCM Token Binding",
+    label: "Notification boundary",
+    icon: BellRing,
+    text: "Token notifikasi diikat ke user login aktif. Payload chat disamarkan agar push notification tidak membawa isi pesan terbuka.",
+  },
+  {
+    title: "TLS + Pinning",
+    label: "Network hardening",
+    icon: Globe2,
+    text: "Koneksi release memakai HTTPS dan certificate pinning untuk endpoint penting seperti Supabase dan Midtrans.",
+  },
 ];
 
 const customPoints = [
-  "Logo, nama pesantren, warna, kop dokumen, dan identitas lembaga mengikuti klien.",
-  "Modul bisa ditambah, dikurangi, atau disederhanakan sesuai kebijakan pesantren.",
-  "Role, batas gender/jurusan, format laporan, dan alur validasi dapat dibuat khusus.",
-  "pesantrenPro adalah brand produk, sementara aplikasi klien tetap memakai branding pesantren terkait.",
+  "Nama aplikasi, logo, warna, ikon, dan tampilan utama dapat mengikuti identitas resmi pesantren.",
+  "Kop dokumen, format laporan, istilah menu, dan alur validasi dapat disesuaikan dengan kebijakan pesantren.",
+  "Modul dapat diaktifkan, disederhanakan, atau dikembangkan bertahap sesuai kesiapan operasional pesantren.",
+  "Role, batas gender/jurusan, struktur akses, dan persetujuan internal dapat dirancang mengikuti tata kelola pesantren.",
 ];
 
 function Reveal({
@@ -556,7 +687,7 @@ function ExperienceBridge() {
           </Reveal>
           <Reveal delay={0.08}>
             <p className="max-w-2xl text-xl leading-9 text-slate-700 dark:text-slate-300">
-              Sistem ini tidak dibuat untuk memamerkan menu sebanyak mungkin. Ia dibuat agar pesantren punya satu pusat kendali yang terasa rapi, bisa diaudit, dan tetap mengikuti kebiasaan kerja lembaga.
+              Sistem ini tidak dibuat untuk memamerkan menu sebanyak mungkin. Ia dirancang sebagai pusat kendali yang rapi, bisa diaudit, dan tetap mengikuti kebiasaan kerja pesantren.
             </p>
           </Reveal>
         </div>
@@ -652,10 +783,10 @@ function ImplementationProcessSection() {
             Alur kerja proyek
           </Badge>
           <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
-            Dari diskusi awal sampai sistem berjalan, langkahnya dibuat terang.
+            Dari diskusi awal sampai sistem berjalan, setiap tahap dibuat jelas.
           </h2>
           <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Calon pesantren tidak perlu menebak prosesnya. Setiap tahap punya keluaran yang jelas agar implementasi tidak berhenti sebagai demo.
+            Pesantren tidak perlu menebak prosesnya. Setiap tahap punya keluaran yang jelas agar implementasi tidak berhenti sebagai demo.
           </p>
         </Reveal>
 
@@ -680,6 +811,135 @@ function ImplementationProcessSection() {
   );
 }
 
+function AndroidShowcaseSection() {
+  return (
+    <section id="android" className="bg-[#eef4ef] py-24 dark:bg-slate-950">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
+          <Reveal>
+            <Badge className="mb-4 bg-emerald-950 text-white dark:bg-cyan-300 dark:text-slate-950">
+              <Smartphone className="size-3" />
+              Android experience
+            </Badge>
+            <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
+              Satu aplikasi Android untuk wali, alumni, kantin, donatur, dan layanan publik pesantren.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
+              Wali memantau perkembangan santri tanpa mengubah data administrasi. Alumni punya ruang komunitas yang termoderasi. Kantin memproses transaksi Dompet Santri melalui perangkat terdaftar. Pengguna umum tetap mendapat manfaat dari Al-Qur&apos;an digital, jadwal sholat, cuaca, arah kiblat, hadis, berita, donasi, dan Tanya AI.
+            </p>
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              {[
+                "Monitoring santri lengkap: profil, hafalan, murojaah, kitab, disiplin, kesehatan, izin, prestasi",
+                "Pembayaran SPP, donasi, top up Dompet Santri, PIN, limit, approval, dan dispute",
+                "Layanan publik Islami: Al-Qur'an, audio murottal, jadwal sholat, cuaca, kiblat, hadis, kalender, kitab",
+                "Alumni, forum, chat E2EE, direct reply, notifikasi resmi, kantin QR/NFC, dan cache terenkripsi",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3 rounded-lg border border-emerald-900/10 bg-white/70 px-4 py-3 text-sm font-medium shadow-sm dark:border-cyan-300/15 dark:bg-slate-900">
+                  <Check className="size-4 shrink-0 text-emerald-800 dark:text-cyan-300" />
+                  {item}
+                </div>
+              ))}
+            </div>
+            <Button
+              render={<Link href="/android" />}
+              nativeButton={false}
+              className="mt-6 bg-emerald-950 text-white hover:bg-emerald-900 dark:bg-cyan-300 dark:text-slate-950 dark:hover:bg-cyan-200"
+            >
+              Baca Detail Android
+              <ArrowRight className="size-4" />
+            </Button>
+          </Reveal>
+
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, margin: "-80px" }}
+            className="grid grid-cols-2 gap-4 md:grid-cols-4"
+          >
+            {screenshots.map((shot, index) => (
+              <motion.article
+                key={shot.title}
+                variants={fadeUp}
+                transition={{ duration: 0.6 }}
+                className={index % 2 ? "pt-10" : ""}
+              >
+                <div className="overflow-hidden rounded-lg border border-white/80 bg-white p-2 shadow-2xl shadow-emerald-950/12 dark:border-slate-800 dark:bg-slate-900 dark:shadow-cyan-950/25">
+                  <div className="relative aspect-[9/16] overflow-hidden rounded-md bg-slate-100 dark:bg-slate-950">
+                    <Image src={shot.src} alt={`${shot.title} pesantrenPro`} fill className="object-cover" sizes="(min-width: 1024px) 18vw, 45vw" />
+                  </div>
+                </div>
+                <div className="mt-3 flex items-center gap-2">
+                  <span className={`size-2 rounded-full ${shot.color}`} />
+                  <p className="text-sm font-semibold">{shot.title}</p>
+                </div>
+              </motion.article>
+            ))}
+          </motion.div>
+        </div>
+
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4"
+        >
+          {androidAssurancePoints.map((point, index) => (
+            <motion.article
+              key={point.title}
+              variants={fadeUp}
+              transition={{ duration: 0.58 }}
+              className={`rounded-lg border border-emerald-900/10 bg-white/82 p-5 shadow-sm backdrop-blur dark:border-cyan-300/15 dark:bg-slate-900/80 ${
+                index === 1 || index === 3 ? "lg:translate-y-6" : ""
+              }`}
+            >
+              <span className="mb-6 flex size-9 items-center justify-center rounded-lg bg-emerald-950 font-mono text-sm text-white dark:bg-cyan-300 dark:text-slate-950">
+                0{index + 1}
+              </span>
+              <h3 className="text-lg font-semibold leading-7">{point.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">{point.text}</p>
+            </motion.article>
+          ))}
+        </motion.div>
+
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-5"
+        >
+          {androidFeatureGroups.map((group) => {
+            const Icon = group.icon;
+            return (
+              <motion.article
+                key={group.title}
+                variants={fadeUp}
+                transition={{ duration: 0.58 }}
+                className="rounded-lg border border-emerald-900/10 bg-white/80 p-5 shadow-sm backdrop-blur dark:border-cyan-300/15 dark:bg-slate-900/80"
+              >
+                <div className="mb-5 flex size-10 items-center justify-center rounded-lg bg-emerald-950 text-white dark:bg-cyan-300 dark:text-slate-950">
+                  <Icon className="size-5" />
+                </div>
+                <h3 className="text-lg font-semibold">{group.title}</h3>
+                <div className="mt-4 grid gap-2">
+                  {group.items.map((feature) => (
+                    <div key={feature} className="flex gap-2 text-sm text-slate-600 dark:text-slate-400">
+                      <Check className="mt-0.5 size-3.5 shrink-0 text-emerald-800 dark:text-cyan-300" />
+                      <span>{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.article>
+            );
+          })}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
 function AdminPanelShowcase() {
   return (
     <section id="admin-panel" className="relative bg-slate-950 py-24 text-white">
@@ -690,16 +950,45 @@ function AdminPanelShowcase() {
           <div>
             <Badge className="mb-5 border border-cyan-300/30 bg-cyan-300/10 text-cyan-100">
               <PanelTop className="size-3" />
-              Admin panel lengkap
+              Admin panel operasional
             </Badge>
             <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-6xl">
-              Admin panel yang terasa seperti ruang kerja, bukan daftar menu.
+              Ruang kerja pesantren yang mengikat data, uang, audit, dan keputusan.
             </h2>
           </div>
           <p className="text-xl leading-9 text-slate-300">
-            Dari data santri sampai audit backend, semuanya diletakkan dalam alur kerja yang bisa dipahami pengurus. Operator bekerja cepat, pimpinan melihat gambaran besar, dan jejak keputusan tetap tersimpan.
+            Admin Panel tidak berhenti sebagai tempat input data. Ia mengatur hak akses, memvalidasi EMIS, menjaga buku besar, mengawasi Dompet Santri, mengirim notifikasi Android, membantu AI/RAG, dan memberi super admin pusat kontrol backend.
           </p>
         </Reveal>
+
+        <motion.div
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-100px" }}
+          className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4"
+        >
+          {adminWorkflowCards.map((workflow, index) => {
+            const Icon = workflow.icon;
+            return (
+              <motion.article
+                key={workflow.title}
+                variants={fadeUp}
+                transition={{ duration: 0.58 }}
+                className="group min-h-full rounded-lg border border-cyan-300/15 bg-white/[0.07] p-5 shadow-xl shadow-cyan-950/20 backdrop-blur transition-colors hover:border-cyan-300/35 hover:bg-white/[0.10]"
+              >
+                <div className="mb-6 flex items-center justify-between border-b border-white/10 pb-4">
+                  <span className="flex size-11 items-center justify-center rounded-lg bg-cyan-300 text-slate-950 transition-transform group-hover:scale-105">
+                    <Icon className="size-5" />
+                  </span>
+                  <span className="font-mono text-xs text-cyan-200">0{index + 1}</span>
+                </div>
+                <h3 className="text-lg font-semibold leading-7 text-white">{workflow.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-300">{workflow.text}</p>
+              </motion.article>
+            );
+          })}
+        </motion.div>
 
         <motion.div
           variants={stagger}
@@ -747,8 +1036,26 @@ function AdminPanelShowcase() {
         <Reveal className="mt-16 max-w-4xl">
           <div className="border-l-2 border-cyan-300 pl-6">
             <p className="text-2xl font-medium leading-10 text-white">
-              Setiap modul boleh terlihat sederhana di layar, tetapi di belakangnya ada role, validasi, audit, export, dan batasan keamanan yang menjaga data pesantren tetap tertib.
+              Setiap tombol boleh terlihat sederhana di layar, tetapi di belakangnya ada role, validasi, audit, ledger, webhook, RLS, dan batasan keamanan yang menjaga kerja pesantren tetap tertib.
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Button
+                render={<Link href="/admin-panel" />}
+                nativeButton={false}
+                className="bg-cyan-300 text-slate-950 hover:bg-cyan-200"
+              >
+                Baca Detail Admin Panel
+                <ArrowRight className="size-4" />
+              </Button>
+              <Button
+                render={<Link href="/workflow-pengguna" />}
+                nativeButton={false}
+                variant="outline"
+                className="border-cyan-300/25 bg-transparent text-cyan-100 hover:bg-cyan-300/10"
+              >
+                Lihat Workflow
+              </Button>
+            </div>
           </div>
         </Reveal>
 
@@ -924,10 +1231,10 @@ function BonusWebsiteSection() {
             Bonus unggulan
           </Badge>
           <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-6xl">
-            Mengadopsi sistem ini, pesantren mendapatkan bonus pembuatan website.
+            Paket implementasi dapat dilengkapi dengan website resmi pesantren.
           </h2>
           <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Website publik menjadi wajah pertama pesantren untuk calon wali santri, alumni, dan masyarakat. Bonus ini dibuat agar ekosistem digital tidak hanya kuat di internal, tetapi juga rapi saat dilihat dari luar.
+            Website publik menjadi wajah pertama bagi calon wali santri, alumni, dan masyarakat. Kehadirannya membuat ekosistem digital tidak hanya kuat di internal, tetapi juga rapi saat dilihat dari luar.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button
@@ -983,7 +1290,7 @@ function ProblemSection() {
             Ini yang biasanya terjadi sebelum data pesantren rapi.
           </h2>
           <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Masalahnya bukan pengurus kurang teliti. Sering kali alat kerjanya memang belum menyatu.
+            Masalahnya bukan kurang teliti. Sering kali alat kerjanya memang belum menyatu.
           </p>
         </Reveal>
 
@@ -1036,7 +1343,7 @@ function SocialProofSection() {
             Sudah dipakai dari kebutuhan nyata pesantren.
           </h2>
           <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-            Sistem ini tidak dimulai dari proposal. Ia lahir dari pekerjaan harian yang perlu dibuat lebih tertib.
+            Sistem ini lahir dari pekerjaan harian yang perlu dibuat lebih tertib, bukan dari asumsi vendor yang jauh dari lapangan.
           </p>
         </Reveal>
 
@@ -1046,7 +1353,7 @@ function SocialProofSection() {
               &ldquo;Sistem ini membuat rekap Diklat yang biasanya 3 hari selesai jauh lebih cepat dan mudah diperiksa.&rdquo;
             </blockquote>
             <figcaption className="mt-6 border-t border-slate-200 pt-5 text-sm leading-6 text-slate-600 dark:border-slate-800 dark:text-slate-300">
-              Pengurus Pondok Pesantren Al-Hasanah Cibeuti, Kawalu, Tasikmalaya.
+              Pondok Pesantren Al-Hasanah Cibeuti, Kawalu, Tasikmalaya.
             </figcaption>
             <div className="mt-6 grid gap-2 sm:grid-cols-2">
               {proofStats.map((stat) => (
@@ -1145,7 +1452,7 @@ function FaqSection() {
             Pertanyaan umum
           </Badge>
           <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-5xl">
-            Hal yang biasanya ditanyakan pengurus.
+            Hal yang biasanya ditanyakan pesantren.
           </h2>
         </Reveal>
 
@@ -1191,14 +1498,15 @@ export function LandingPage() {
             {[
               ["Masalah", "#masalah"],
               ["Ekosistem", "#ekosistem"],
+              ["Android", "/android"],
+              ["Keamanan", "/keamanan-sistem"],
+              ["Workflow", "/workflow-pengguna"],
               ["Bukti", "#bukti"],
-              ["Developer", "#developer"],
-              ["Harga", "#harga"],
               ["FAQ", "#faq"],
             ].map(([label, href]) => (
-              <a key={label} href={href} className="transition-colors hover:text-emerald-800 dark:hover:text-cyan-200">
+              <Link key={label} href={href} className="transition-colors hover:text-emerald-800 dark:hover:text-cyan-200">
                 {label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="flex items-center gap-2">
@@ -1227,7 +1535,7 @@ export function LandingPage() {
             <motion.div variants={fadeUp} transition={{ duration: 0.65 }}>
               <Badge className="mb-5 border-emerald-800/20 bg-white/72 text-emerald-950 shadow-sm backdrop-blur dark:border-cyan-300/25 dark:bg-cyan-300/10 dark:text-cyan-100">
                 <Sparkles className="size-3" />
-                Sistem pesantren yang lahir dari pekerjaan harian
+                Sistem pesantren terpadu dengan AI operasional
               </Badge>
             </motion.div>
             <motion.h1
@@ -1235,14 +1543,14 @@ export function LandingPage() {
               transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
               className="max-w-4xl text-[32px] font-semibold leading-[1.14] tracking-normal text-slate-950 sm:text-5xl lg:text-[56px] dark:text-white"
             >
-              Satu sistem untuk semua kegiatan pesantren. Dari hafalan sampai keuangan.
+              Transformasi digital pesantren dalam satu ekosistem: Admin Panel, Android, dan AI yang memahami ritme operasionalnya.
             </motion.h1>
             <motion.p
               variants={fadeUp}
               transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
               className="mt-6 max-w-2xl text-lg leading-8 text-slate-700 sm:text-xl sm:leading-9 dark:text-slate-300"
             >
-              pesantrenPro dibangun dari dalam pesantren. Admin panel, Android untuk wali, website publik, dan keamanan berlapis tersaji dalam satu ekosistem yang bisa disesuaikan penuh dengan nama, warna, dan cara kerja pesantren Anda.
+              pesantrenPro menyatukan Admin Panel, Android wali, Dompet Santri, keuangan, EMIS, hafalan, notifikasi, laporan, dan audit. AI Analysis membantu membaca kondisi santri dan operasional, AI Agent menyiapkan aksi dengan konfirmasi admin, sementara RAG menjawab dari dokumen dan knowledge base pesantren.
             </motion.p>
             <motion.div variants={fadeUp} className="mt-7 flex max-w-3xl flex-wrap gap-2">
               {heroProofs.map((proof) => (
@@ -1258,7 +1566,7 @@ export function LandingPage() {
                 size="lg"
                 className="h-12 bg-emerald-950 px-5 text-white shadow-xl shadow-emerald-950/18 hover:bg-emerald-900 dark:bg-cyan-300 dark:text-slate-950 dark:hover:bg-cyan-200"
               >
-                Lihat Demo Nyata
+                Lihat Sistem Berbasis AI
                 <ArrowRight className="size-4" />
               </Button>
               <Button
@@ -1343,149 +1651,69 @@ export function LandingPage() {
       <AdminPanelShowcase />
       <SocialProofSection />
 
-      <section id="android" className="bg-[#eef4ef] py-24 dark:bg-slate-950">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-center">
-            <Reveal>
-              <Badge className="mb-4 bg-emerald-950 text-white dark:bg-cyan-300 dark:text-slate-950">
-                <Smartphone className="size-3" />
-                Android experience
-              </Badge>
-              <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
-                Tampilan mobile untuk wali, alumni, dan kantin.
-              </h2>
-              <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-                Wali melihat yang perlu mereka lihat. Alumni punya ruang berinteraksi. Kantin bisa melayani transaksi. Fitur publik seperti Al-Qur&apos;an digital, jadwal sholat, berita, dan notifikasi membuat aplikasi tetap bermanfaat bahkan di luar urusan administrasi.
-              </p>
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {["Al-Qur'an digital dan jadwal sholat", "Pembayaran online, donasi, dan Dompet Santri", "Push notification dan offline outbox", "Forum, alumni, chat E2EE, dan kantin"].map((item) => (
-                  <div key={item} className="flex items-center gap-3 rounded-lg border border-emerald-900/10 bg-white/70 px-4 py-3 text-sm font-medium shadow-sm dark:border-cyan-300/15 dark:bg-slate-900">
-                    <Check className="size-4 text-emerald-800 dark:text-cyan-300" />
-                    {item}
-                  </div>
-                ))}
-              </div>
-            </Reveal>
+      <AndroidShowcaseSection />
 
-            <motion.div
-              variants={stagger}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "-80px" }}
-              className="grid grid-cols-2 gap-4 md:grid-cols-4"
-            >
-              {screenshots.map((shot, index) => (
-                <motion.article
-                  key={shot.title}
-                  variants={fadeUp}
-                  transition={{ duration: 0.6 }}
-                  className={index % 2 ? "pt-10" : ""}
-                >
-                  <div className="overflow-hidden rounded-lg border border-white/80 bg-white p-2 shadow-2xl shadow-emerald-950/12 dark:border-slate-800 dark:bg-slate-900 dark:shadow-cyan-950/25">
-                    <div className="relative aspect-[9/16] overflow-hidden rounded-md bg-slate-100 dark:bg-slate-950">
-                      <Image src={shot.src} alt={`${shot.title} pesantrenPro`} fill className="object-cover" sizes="(min-width: 1024px) 18vw, 45vw" />
-                    </div>
-                  </div>
-                  <div className="mt-3 flex items-center gap-2">
-                    <span className={`size-2 rounded-full ${shot.color}`} />
-                    <p className="text-sm font-semibold">{shot.title}</p>
-                  </div>
-                </motion.article>
-              ))}
-            </motion.div>
-          </div>
+      <section id="keamanan" className="relative overflow-hidden bg-slate-950 pb-16 pt-28 text-slate-50">
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.10)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.10)_1px,transparent_1px)] bg-[size:34px_34px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(6,182,212,0.18),transparent_42%,rgba(16,185,129,0.10)_74%,transparent)]" />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Reveal className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+            <div>
+              <Badge className="mb-5 border border-cyan-300/30 bg-cyan-300/10 text-cyan-100">
+                <LockKeyhole className="size-3" />
+                Lapisan keamanan profesional
+              </Badge>
+              <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-6xl">
+                Keamanan bukan tempelan. Ia menentukan cara sistem mengambil keputusan.
+              </h2>
+            </div>
+            <p className="mt-6 text-lg leading-8 text-slate-300">
+              Data santri, transaksi, wallet, dan komunikasi alumni tidak diperlakukan sebagai catatan biasa. Setiap area penting punya kontrol yang jelas: kunci perangkat, enkripsi, tanda tangan transaksi, PIN verifier, E2EE, ledger, RLS, RPC, Edge Function, audit, notifikasi aman, dan validasi backend.
+            </p>
+          </Reveal>
 
           <motion.div
             variants={stagger}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-100px" }}
-            className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-5"
+            className="mt-12 grid items-stretch gap-3 sm:grid-cols-2 lg:grid-cols-4"
           >
-            {androidFeatureGroups.map((group) => {
-              const Icon = group.icon;
+            {securityControlCards.map((control, index) => {
+              const Icon = control.icon;
               return (
                 <motion.article
-                  key={group.title}
+                  key={control.title}
                   variants={fadeUp}
                   transition={{ duration: 0.58 }}
-                  className="rounded-lg border border-emerald-900/10 bg-white/80 p-5 shadow-sm backdrop-blur dark:border-cyan-300/15 dark:bg-slate-900/80"
+                  className="group flex min-h-[228px] flex-col rounded-lg border border-cyan-300/14 bg-slate-950/86 p-4 shadow-xl shadow-cyan-950/18 backdrop-blur transition-colors hover:border-cyan-300/35 hover:bg-slate-900/92"
                 >
-                  <div className="mb-5 flex size-10 items-center justify-center rounded-lg bg-emerald-950 text-white dark:bg-cyan-300 dark:text-slate-950">
-                    <Icon className="size-5" />
+                  <div className="mb-4 flex items-center justify-between gap-4 border-b border-cyan-300/12 pb-4">
+                    <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-cyan-300 text-slate-950 shadow-lg shadow-cyan-300/10 transition-transform group-hover:scale-105">
+                      <Icon className="size-5" />
+                    </span>
+                    <span className="rounded-md border border-cyan-300/20 bg-cyan-300/8 px-2.5 py-1 font-mono text-[10px] uppercase tracking-normal text-cyan-200">
+                      0{index + 1}
+                    </span>
                   </div>
-                  <h3 className="text-lg font-semibold">{group.title}</h3>
-                  <div className="mt-4 grid gap-2">
-                    {group.items.map((feature) => (
-                      <div key={feature} className="flex gap-2 text-sm text-slate-600 dark:text-slate-400">
-                        <Check className="mt-0.5 size-3.5 shrink-0 text-emerald-800 dark:text-cyan-300" />
-                        <span>{feature}</span>
-                      </div>
-                    ))}
+                  <div className="flex flex-1 flex-col">
+                    <p className="font-mono text-[11px] uppercase tracking-normal text-cyan-300">{control.label}</p>
+                    <h3 className="mt-2 text-lg font-semibold leading-7 text-white">{control.title}</h3>
+                    <p className="mt-2 text-sm leading-6 text-slate-300">{control.text}</p>
                   </div>
                 </motion.article>
               );
             })}
           </motion.div>
-        </div>
-      </section>
-
-      <section id="keamanan" className="relative overflow-hidden bg-slate-950 py-28 text-slate-50">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.10)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.10)_1px,transparent_1px)] bg-[size:34px_34px]" />
-        <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(6,182,212,0.18),transparent_42%,rgba(16,185,129,0.10)_74%,transparent)]" />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
-          <Reveal>
-            <Badge className="mb-5 border border-cyan-300/30 bg-cyan-300/10 text-cyan-100">
-              <LockKeyhole className="size-3" />
-              Deep security cyber layer
-            </Badge>
-              <h2 className="text-4xl font-semibold leading-tight tracking-normal sm:text-6xl">
-              Keamanan terasa sejak cara sistem mengambil keputusan.
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-slate-300">
-              Data santri, transaksi, wallet, dan komunikasi alumni tidak diperlakukan sebagai catatan biasa. Ada role, RLS, RPC aman, audit log, ledger, E2EE, dan batasan tegas untuk AI.
-            </p>
-            <div className="mt-8 grid gap-3 sm:grid-cols-2">
-              {[
-                { label: "Plaintext chat", value: "blocked", icon: KeyRound },
-                { label: "Frontend secret", value: "forbidden", icon: Fingerprint },
-                { label: "Wallet mutation", value: "ledger only", icon: WalletCards },
-                { label: "Admin action", value: "audited", icon: MonitorCheck },
-              ].map((item) => {
-                const Icon = item.icon;
-                return (
-                  <div key={item.label} className="rounded-lg border border-cyan-300/15 bg-cyan-300/8 p-4 backdrop-blur">
-                    <Icon className="mb-4 size-5 text-cyan-300" />
-                    <p className="text-xs uppercase text-slate-400">{item.label}</p>
-                    <p className="mt-1 font-semibold text-cyan-50">{item.value}</p>
-                  </div>
-                );
-              })}
-            </div>
-          </Reveal>
-
-          <Reveal>
-            <div className="rounded-lg border border-cyan-300/20 bg-slate-950/86 p-4 shadow-2xl shadow-cyan-950/40 backdrop-blur">
-              <div className="mb-4 flex items-center gap-2 border-b border-cyan-300/15 pb-3 font-mono text-sm text-cyan-200">
-                <TerminalSquare className="size-4" />
-                security-protocol.trace
-              </div>
-              <div className="space-y-3">
-                {securityLayers.map((layer, index) => (
-                  <motion.div
-                    key={layer}
-                    initial={{ opacity: 0, x: 22 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.055, duration: 0.52 }}
-                    className="flex gap-3 rounded-md border border-slate-800 bg-slate-900/72 p-3 font-mono text-sm leading-6 text-slate-300"
-                  >
-                    <span className="text-cyan-300">0{index + 1}</span>
-                    <span>{layer}</span>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
+          <Reveal className="mt-8">
+            <Button
+              render={<Link href="/keamanan-sistem" />}
+              nativeButton={false}
+              className="bg-cyan-300 text-slate-950 hover:bg-cyan-200"
+            >
+              Baca Halaman Keamanan Sistem
+              <ArrowRight className="size-4" />
+            </Button>
           </Reveal>
         </div>
       </section>
@@ -1494,14 +1722,14 @@ export function LandingPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <Reveal>
             <Badge variant="outline" className="mb-4 border-emerald-700/25 text-emerald-900 dark:border-cyan-300/25 dark:text-cyan-100">
-              <BadgeCheck className="size-3" />
-              Full custom
+                <BadgeCheck className="size-3" />
+              Identitas pesantren
             </Badge>
             <h2 className="text-4xl font-semibold tracking-normal sm:text-5xl">
-              Nama sistem tegas, branding klien tetap milik pesantren.
+              Sistem digital yang tampil sebagai milik pesantren Anda.
             </h2>
             <p className="mt-5 text-lg leading-8 text-slate-600 dark:text-slate-300">
-              pesantrenPro adalah brand produk penawaran. Ketika diterapkan, nama aplikasi, logo, warna, modul, role, dokumen, dan alur kerja mengikuti pesantren terkait.
+              Saat diterapkan, sistem dapat menyesuaikan nama, logo, warna, istilah menu, format laporan, dokumen, role, dan alur kerja sesuai kebijakan pesantren.
             </p>
           </Reveal>
           <motion.div
@@ -1532,17 +1760,20 @@ export function LandingPage() {
             {
               title: "Operasional Harian",
               icon: UsersRound,
-              text: "Dashboard, data santri, EMIS, kesantrian, tahfidz, ulangan, berita, notifikasi, dan laporan untuk pengurus.",
+              text: "Dashboard, data santri, EMIS, kesantrian, tahfidz, ulangan, berita, notifikasi, dan laporan untuk operasional harian.",
+              href: "/workflow-pengguna",
             },
             {
               title: "Keuangan & Wallet",
               icon: WalletCards,
               text: "Tagihan, transaksi, donasi, Dompet Santri, kantin, settlement, dispute, risk event, dan rekonsiliasi.",
+              href: "/dompet-santri",
             },
             {
               title: "Pembelajaran & Layanan",
               icon: BookOpenCheck,
               text: "Hafalan Quran, hafalan kitab, kesehatan, perizinan, alumni, forum, chat E2EE, AI/RAG, dan inventaris.",
+              href: "/admin-panel",
             },
           ].map((item, index) => {
             const Icon = item.icon;
@@ -1552,6 +1783,10 @@ export function LandingPage() {
                   <Icon className="mb-6 size-8 text-emerald-800 dark:text-cyan-300" />
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="mt-3 leading-7 text-slate-600 dark:text-slate-400">{item.text}</p>
+                  <Link href={item.href} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-emerald-800 hover:text-emerald-950 dark:text-cyan-300 dark:hover:text-cyan-100">
+                    Baca detail
+                    <ArrowRight className="size-4" />
+                  </Link>
                 </article>
               </Reveal>
             );
@@ -1574,7 +1809,7 @@ export function LandingPage() {
               Mulai dari percakapan, bukan komitmen.
             </h2>
             <p className="mt-5 text-lg leading-8 text-emerald-50/80">
-              Tidak perlu langsung memutuskan. Ceritakan kondisi pesantren Anda: berapa santri, sistem apa yang sedang dipakai, dan apa yang paling menyulitkan pengurus saat ini.
+              Tidak perlu langsung memutuskan. Ceritakan kondisi pesantren Anda: berapa santri, sistem apa yang sedang dipakai, dan apa yang paling menyulitkan operasional saat ini.
             </p>
             <p className="mt-4 text-lg leading-8 text-emerald-50/80">
               Dari sana, baru kita lihat apakah pesantrenPro cocok atau tidak.
@@ -1625,7 +1860,7 @@ export function LandingPage() {
       <footer className="border-t border-emerald-900/10 bg-[#f3efe5] px-4 py-8 text-sm text-slate-600 dark:border-cyan-400/15 dark:bg-slate-950 dark:text-slate-400 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="font-medium text-slate-800 dark:text-slate-200">pesantrenPro</p>
-          <p>Ekosistem digital pesantren yang dapat disesuaikan dengan kebijakan lembaga.</p>
+          <p>Ekosistem digital yang dapat disesuaikan dengan kebijakan pesantren.</p>
         </div>
       </footer>
 
