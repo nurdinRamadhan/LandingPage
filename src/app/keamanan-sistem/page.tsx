@@ -1,156 +1,160 @@
 import type { Metadata } from "next";
 
-import { DetailPage, type DetailPageData } from "@/components/detail-page";
+import { DetailPage, type DetailPageData, whatsappDemoFullUrl, whatsappConversationUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
   title: "Keamanan Sistem | pesantrenPro",
   description:
-    "Lapisan keamanan pesantrenPro: RBAC, RLS, secure RPC, Edge Functions, Android Keystore, AES/GCM, E2EE, ledger, audit, dan AI/RAG sanitization.",
+    "Protokol keamanan tingkat tinggi pesantrenPro: Klasifikasi data merah/kuning, enkripsi field-level pgcrypto, Android Keystore hardware-backed, and E2EE Chat alumni.",
 };
 
 const data: DetailPageData = {
-  eyebrow: "Keamanan Sistem",
-  title: "Keamanan dirancang sebagai alur kerja, bukan klaim kosong.",
+  eyebrow: "SECURITY PROTOCOL V1.0",
+  title: "Integritas Data adalah Amanah Terbesar Kami.",
   description:
-    "pesantrenPro melindungi data santri, pembayaran, Dompet Santri, chat alumni, notifikasi, dan AI/RAG dengan kontrol berlapis dari Android, database, Edge Function, audit, hingga backend command center.",
-  primaryCta: "Diskusi Keamanan Sistem",
-  stats: ["RLS-first access model", "No service role di frontend", "Ledger-first wallet", "AI wajib sanitasi data"],
+    "Keamanan di pesantrenPro bukan sekadar fitur tambahan, melainkan arsitektur dasar yang melindungi privasi santri, transparansi keuangan, and kerahasiaan komunikasi melalui enkripsi tingkat perbankan and kendali akses berlapis.",
+  primaryCta: "Minta Demo Full Sistem",
+  primaryCtaUrl: whatsappDemoFullUrl,
+  secondaryCta: "Konsultasi Keamanan",
+  secondaryCtaUrl: whatsappConversationUrl,
+  stats: ["Zero Plaintext Policy", "Hardware-Backed Security", "Audit Locked Ledger", "E2EE Chat Verified"],
   heroCards: [
     {
-      title: "Data sensitif tidak dibuka bebas",
+      title: "Klasifikasi Data Berlapis",
+      icon: "layers",
+      text: "Seluruh informasi diklasifikasikan menjadi level Merah (Sangat Sensitif), Kuning (Pribadi), and Hijau (Operasional) dengan perlakuan enkripsi yang berbeda.",
+    },
+    {
+      title: "Enkripsi Field-Level",
       icon: "lock",
-      text: "NIK, KK, rekening, token, private key, dan data merah lain tidak boleh tampil polos di UI, log, localStorage, sessionStorage, atau payload AI.",
+      text: "Data Merah (seperti NIK and Rekening) wajib melalui proses pgp_sym_encrypt di level database pgcrypto, memastikan data tidak terbaca meski akses fisik database terekspos.",
     },
     {
-      title: "Aksi penting lewat backend",
-      icon: "server",
-      text: "Pembayaran, webhook Midtrans, wallet, notifikasi, akun admin, upload, dan AI/RAG dijalankan lewat RPC atau Edge Function yang tervalidasi.",
+      title: "Android Keystore Trust",
+      icon: "smartphone",
+      text: "Kunci privat kriptografi disimpan dalam hardware-backed keystore perangkat Android, mustahil diekspor or dipindahkan ke perangkat lain.",
     },
     {
-      title: "Transaksi punya jejak audit",
-      icon: "monitor",
-      text: "Keuangan memakai buku besar Audit Locked, sedangkan Dompet Santri memakai ledger append-only, hash-chain, risk event, dispute, dan rekonsiliasi.",
-    },
-    {
-      title: "AI tidak diberi kuasa bebas",
-      icon: "sparkles",
-      text: "AI Analysis, AI Agent, RAG Decision, dan AI auditor hanya memakai data yang disaring. Aksi AI Agent tetap menunggu konfirmasi admin.",
+      title: "End-to-End Encryption",
+      icon: "send",
+      text: "Chat alumni menggunakan protokol ECDH (Elliptic Curve Diffie-Hellman) untuk pertukaran kunci and AES-256-GCM untuk enkripsi pesan di sisi perangkat.",
     },
   ],
   bands: [
     {
-      eyebrow: "Access Control",
-      title: "Hak akses dijaga dari login sampai database.",
-      text: "Sistem tidak mengandalkan menu yang disembunyikan. Role, relasi data, RLS, RPC, dan audit dipakai bersama agar setiap akun hanya bekerja di wilayah kewenangannya.",
+      eyebrow: "DATA CLASSIFICATION & PROTECTION",
+      title: "Standar Perlindungan Data Santri & Pengurus.",
+      text: "Kami menerapkan kebijakan 'Zero Plaintext' untuk seluruh informasi sensitif. Data tidak hanya disimpan, tetapi diproteksi sesuai dengan tingkat risikonya.",
       cards: [
         {
-          title: "Supabase Auth",
-          icon: "key",
-          text: "Setiap admin login resmi. Akun nonaktif ditolak, sesi divalidasi, dan halaman awal diarahkan sesuai role seperti kesantrian, bendahara, kantin, atau dashboard.",
-        },
-        {
-          title: "RBAC",
-          icon: "users",
-          text: "Role seperti super admin, rois, dewan, bendahara, kesantrian, dan kantin punya batas akses berbeda, termasuk pembatasan gender atau jurusan jika diperlukan.",
-        },
-        {
-          title: "Row Level Security",
-          icon: "database",
-          text: "Tabel operasional dan sensitif dikunci dengan RLS agar akses data tidak hanya bergantung pada tampilan frontend.",
-        },
-        {
-          title: "Secure RPC",
+          title: "Level Merah (Kritis)",
           icon: "shield",
-          text: "Data sensitif seperti detail santri, update data, validasi EMIS, dan export EMIS memakai RPC yang memvalidasi role, alasan akses, dan jejak audit.",
-        },
-      ],
-    },
-    {
-      eyebrow: "Financial Control",
-      title: "Uang tidak berubah karena tombol, screenshot, atau edit angka.",
-      text: "Sistem finansial memakai online authority, webhook, ledger, audit, idempotency, dan rekonsiliasi agar transaksi penting tetap punya sumber kebenaran yang jelas.",
-      cards: [
-        {
-          title: "Midtrans Webhook",
-          icon: "server",
-          text: "Pembayaran digital tidak dianggap sukses dari screenshot. Status final mengikuti callback/webhook dan validasi backend.",
+          text: "NIK, No. KK, No. Rekening, and Token Akses. Wajib enkripsi pgcrypto field-level and RLS ketat.",
         },
         {
-          title: "Buku Besar Audit Locked",
-          icon: "excel",
-          text: "Transaksi keuangan menyimpan tanggal, pencatat, subjek, metode, nominal, status, dan order ID sehingga koreksi tidak menghapus jejak lama.",
+          title: "Level Kuning (Pribadi)",
+          icon: "users",
+          text: "Nama Lengkap, Alamat, No. HP, and Riwayat Kesehatan. Dienkripsi and hanya dapat diakses melalui otorisasi role resmi.",
         },
         {
-          title: "Ledger Dompet Santri",
-          icon: "wallet",
-          text: "Saldo Dompet Santri berubah lewat transaksi ledger append-only. Cached balance hanya tampilan cepat, bukan sumber kebenaran utama.",
-        },
-        {
-          title: "Nonce dan Idempotency",
-          icon: "qr",
-          text: "Transaksi kantin dan top up memakai idempotency key, nonce, challenge, dan expiry untuk mengurangi risiko replay dan transaksi ganda.",
-        },
-      ],
-    },
-    {
-      eyebrow: "Android & Cryptography",
-      title: "Aplikasi Android membawa kontrol kriptografi di perangkat.",
-      text: "Kontrol Android dipakai untuk melindungi cache, kunci, PIN, chat alumni, transaksi Dompet Santri, dan koneksi ke endpoint penting.",
-      cards: [
-        {
-          title: "Android Keystore",
-          icon: "smartphone",
-          text: "Kunci lokal dibungkus oleh keamanan perangkat, termasuk key untuk cache sensitif, outbox chat, private key chat, dan private key wallet.",
-        },
-        {
-          title: "AES/GCM",
-          icon: "lock",
-          text: "Cache lokal dan material sensitif memakai authenticated encryption sehingga data tidak hanya tersembunyi, tapi juga divalidasi integritasnya.",
-        },
-        {
-          title: "Argon2id PIN Verifier",
-          icon: "key",
-          text: "PIN Dompet Santri tidak disimpan sebagai angka asli. Sistem memakai salt, parameter KDF, verifier, dan proof untuk operasi sensitif.",
-        },
-        {
-          title: "Ed25519 Signature",
+          title: "One-Way Hashing",
           icon: "fingerprint",
-          text: "Operasi wallet dan kantin ditandatangani dari perangkat untuk membantu memastikan request berasal dari konteks device yang sah.",
+          text: "Identifier seperti NIS (Nomor Induk Santri) dikelola menggunakan SHA-256 hash untuk lookup cepat tanpa membuka identitas asli.",
+        },
+        {
+          title: "Audit Log Permanen",
+          icon: "monitor",
+          text: "Setiap akses ke data Level Merah terekam dalam audit log immutable yang mencatat aktor, waktu, IP address, and alasan akses.",
         },
       ],
     },
     {
-      eyebrow: "Operational Security",
-      title: "Keamanan tetap dipantau setelah sistem berjalan.",
-      text: "Audit, command center, notification pipeline, dan incident workflow membantu pesantren mendeteksi masalah operasional sebelum menjadi kerusakan besar.",
+      eyebrow: "CRYPTOGRAPHIC WORKFLOW (E2EE)",
+      title: "Komunikasi Privat Tanpa Celah Server.",
+      text: "Protokol chat alumni kami memastikan bahwa bahkan administrator sistem or penyedia database tidak dapat membaca isi pesan Anda.",
       cards: [
         {
-          title: "Backend Command Center",
-          icon: "monitor",
-          text: "Super admin melihat health score, incidents, timeline, diagnostics, private audit log, FCM token health, antrean Midtrans, dan safe repair manual.",
+          title: "Key Pair Generation",
+          icon: "key",
+          text: "Perangkat membuat pasangan kunci publik/privat secara lokal saat login pertama. Kunci privat tidak pernah meninggalkan perangkat.",
         },
         {
-          title: "E2EE Alumni Chat",
-          icon: "send",
-          text: "Server menyimpan metadata, placeholder, dan ciphertext. Admin monitor tidak membaca isi pesan, hanya statistik dan preview terenkripsi.",
+          title: "ECDH Shared Secret",
+          icon: "code",
+          text: "Pertukaran kunci aman menggunakan kurva eliptik (secp256r1) untuk menghasilkan rahasia bersama (shared secret) tanpa mengirimkan kunci asli.",
+        },
+        {
+          title: "AES-256-GCM Payload",
+          icon: "lock",
+          text: "Isi pesan dienkripsi dengan AES-256 dalam mode GCM (Galois/Counter Mode) untuk menjamin kerahasiaan and integritas pesan.",
+        },
+        {
+          title: "Ciphertext-Only Storage",
+          icon: "database",
+          text: "Server Supabase hanya menyimpan metadata and ciphertext. Tidak ada variabel 'content' plaintext di seluruh tabel chat.",
+        },
+      ],
+    },
+    {
+      eyebrow: "FINANCIAL INTEGRITY & AUTHORITY",
+      title: "Transparansi Keuangan yang Tervalidasi.",
+      text: "Setiap transaksi Dompet Santri and SPP diperlakukan sebagai entitas perbankan dengan validasi ganda di sisi backend and perangkat.",
+      cards: [
+        {
+          title: "Ledger Append-Only",
+          icon: "excel",
+          text: "Saldo tidak diubah melalui 'edit angka', melainkan melalui entri jurnal ledger yang saling mengunci. Mutasi dana tidak dapat dihapus.",
+        },
+        {
+          title: "Idempotency Control",
+          icon: "qr",
+          text: "Request transaksi menggunakan Nonce and Idempotency Key untuk mencegah transaksi ganda akibat gangguan sinyal or double-tap.",
+        },
+        {
+          title: "Argon2id PIN Security",
+          icon: "key",
+          text: "PIN Dompet Santri diproses dengan Argon2id (Winner of Password Hashing Competition) dengan parameter KDF yang tinggi.",
+        },
+        {
+          title: "Online Authority Check",
+          icon: "server",
+          text: "Seluruh keputusan finansial divalidasi di backend service-role yang terisolasi, bukan bergantung pada logika di sisi aplikasi Android.",
+        },
+      ],
+    },
+    {
+      eyebrow: "OPERATIONAL HARDENING",
+      title: "Monitoring & Pertahanan Real-time.",
+      text: "Kami menjaga ekosistem tetap sehat melalui pengawasan otomatis terhadap anomali data and kesehatan infrastruktur.",
+      cards: [
+        {
+          title: "Rate Limiting",
+          icon: "layers",
+          text: "Proteksi terhadap serangan Brute Force and DDoS melalui pembatasan request per menit berdasarkan identitas user and IP.",
+        },
+        {
+          title: "AI Sanitization",
+          icon: "sparkles",
+          text: "Data sensitif wajib disanitasi sebelum dikirim ke AI API. Variabel NIK and Keuangan secara otomatis dihapus dari payload analisis.",
         },
         {
           title: "FCM Token Binding",
           icon: "network",
-          text: "Token perangkat diikat ke user login aktif agar notifikasi tidak nyasar ke akun lama setelah logout atau switch account.",
+          text: "Token notifikasi diikat ke sesi login aktif. Notifikasi akan otomatis dicabut (revoked) saat user melakukan logout permanen.",
         },
         {
-          title: "AI/RAG Sanitization",
-          icon: "sparkles",
-          text: "Data sensitif disaring sebelum masuk AI/RAG. AI tidak memegang saldo, tidak menghapus ledger, dan tidak memutuskan transaksi final.",
+          title: "Secure Edge Functions",
+          icon: "server",
+          text: "Logika bisnis krusial dijalankan di lingkungan Deno yang terisolasi dengan akses terbatas ke variabel lingkungan rahasia.",
         },
       ],
     },
   ],
   closing: {
-    title: "Keamanan sistem dapat diperiksa dari mekanismenya.",
-    text: "Pesantren tidak hanya mendapat janji bahwa data aman. Setiap area penting memiliki batas akses, validasi backend, audit trail, enkripsi, ledger, dan prosedur tindak lanjut yang jelas.",
-    cta: "Bahas Keamanan via WhatsApp",
+    title: "Percayakan Marwah Lembaga Anda pada Sistem yang Amanah.",
+    text: "Kami mengundang administrator and dewan pengawas pesantren untuk mendiskusikan implementasi protokol keamanan ini secara lebih mendalam demi ketenangan seluruh wali santri.",
+    cta: "Minta Demo Full Sistem",
+    ctaUrl: whatsappDemoFullUrl,
   },
 };
 

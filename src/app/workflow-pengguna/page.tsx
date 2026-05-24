@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { DetailPage, type DetailPageData } from "@/components/detail-page";
+import { DetailPage, type DetailPageData, whatsappDemoFullUrl, whatsappConversationUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
   title: "Workflow Pengguna | pesantrenPro",
@@ -13,7 +13,10 @@ const data: DetailPageData = {
   title: "Setiap role punya alur kerja yang jelas, bukan menu yang membingungkan.",
   description:
     "Halaman ini menjelaskan bagaimana sistem dipakai harian: siapa menginput, siapa memverifikasi, siapa memantau, dan apa yang harus dilakukan saat ada pembayaran pending, dispute, notifikasi gagal, atau data yang perlu dikoreksi.",
-  primaryCta: "Bahas Workflow Pesantren",
+  primaryCta: "Minta Demo Full Sistem",
+  primaryCtaUrl: whatsappDemoFullUrl,
+  secondaryCta: "Konsultasi Workflow",
+  secondaryCtaUrl: whatsappConversationUrl,
   stats: ["Role jelas", "Operator tidak tumpang tindih", "Wali hanya monitoring", "Masalah punya jalur tindak lanjut"],
   heroCards: [
     {
@@ -127,7 +130,8 @@ const data: DetailPageData = {
   closing: {
     title: "Workflow yang jelas membuat sistem lebih mudah diadopsi.",
     text: "Pengurus tidak perlu menebak harus membuka menu apa. Setiap role punya tugas, batas, dan jalur eskalasi.",
-    cta: "Diskusikan Workflow",
+    cta: "Minta Demo Full Sistem",
+    ctaUrl: whatsappDemoFullUrl,
   },
 };
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { DetailPage, type DetailPageData } from "@/components/detail-page";
+import { DetailPage, type DetailPageData, whatsappDemoAndroidUrl, whatsappDemoFullUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
   title: "Admin Panel | pesantrenPro",
@@ -13,7 +13,10 @@ const data: DetailPageData = {
   title: "Panel kerja pesantren yang lengkap, tertib, dan bisa diaudit.",
   description:
     "Admin Panel pesantrenPro menggabungkan data induk, EMIS, akademik, kesantrian, keuangan, Dompet Santri, kantin, alumni, inventaris, berita, notifikasi, audit, AI/RAG, dan backend operations dalam satu ruang kerja.",
-  primaryCta: "Minta Demo Admin Panel",
+  primaryCta: "Minta Demo Full Sistem",
+  primaryCtaUrl: whatsappDemoFullUrl,
+  secondaryCta: "Minta Demo Android",
+  secondaryCtaUrl: whatsappDemoAndroidUrl,
   stats: ["20+ modul operasional", "EMIS ready", "Audit Locked finance", "Backend Command Center"],
   heroCards: [
     {
@@ -210,7 +213,8 @@ const data: DetailPageData = {
   closing: {
     title: "Admin Panel adalah pusat kerja, bukan lampiran sistem.",
     text: "Ketika admin panel rapi, Android wali, pembayaran, dompet, laporan, dan audit ikut tertib karena semua data berasal dari workflow yang sama.",
-    cta: "Lihat Demo Admin Panel",
+    cta: "Minta Demo Full Sistem",
+    ctaUrl: whatsappDemoFullUrl,
   },
 };
 

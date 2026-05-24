@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { DetailPage, type DetailPageData } from "@/components/detail-page";
+import { DetailPage, type DetailPageData, whatsappDemoFullUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
   title: "Dompet Santri | pesantrenPro",
@@ -13,7 +13,8 @@ const data: DetailPageData = {
   title: "Uang jajan santri yang tertib, terkontrol, dan bisa diaudit.",
   description:
     "Dompet Santri adalah sistem saldo internal untuk transaksi yang disetujui pesantren, terutama kantin. Sistem ini closed-loop, ledger-first, online-authority, dan tidak memperlakukan saldo sebagai angka yang bebas diedit.",
-  primaryCta: "Bahas Dompet Santri",
+  primaryCta: "Minta Demo Full Sistem",
+  primaryCtaUrl: whatsappDemoFullUrl,
   stats: ["Closed-loop wallet", "Ledger append-only", "QR/NFC kantin", "Audit keamanan satu klik"],
   heroCards: [
     {
@@ -150,7 +151,8 @@ const data: DetailPageData = {
   closing: {
     title: "Dompet Santri membantu pesantren mengelola uang jajan dengan tertib.",
     text: "Wali dapat memantau, kantin dapat bertransaksi, bendahara dapat merekonsiliasi, dan pimpinan memiliki jejak audit untuk menilai risiko maupun koreksi saldo.",
-    cta: "Bahas Implementasi Dompet",
+    cta: "Minta Demo Full Sistem",
+    ctaUrl: whatsappDemoFullUrl,
   },
 };
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { DetailPage, type DetailPageData } from "@/components/detail-page";
+import { DetailPage, type DetailPageData, whatsappDemoAndroidUrl, whatsappDemoFullUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
   title: "Aplikasi Android | pesantrenPro",
@@ -14,6 +14,9 @@ const data: DetailPageData = {
   description:
     "Android pesantrenPro menampilkan data resmi dari admin panel kepada pengguna yang berhak. Wali memantau, alumni berkomunitas, kantin bertransaksi, dan pengguna umum tetap mendapat layanan Islami digital.",
   primaryCta: "Minta Demo Android",
+  primaryCtaUrl: whatsappDemoAndroidUrl,
+  secondaryCta: "Minta Demo Full Sistem",
+  secondaryCtaUrl: whatsappDemoFullUrl,
   stats: ["Monitoring wali", "Pembayaran dan wallet", "Alumni E2EE", "Layanan Islami publik"],
   heroCards: [
     {
@@ -158,7 +161,8 @@ const data: DetailPageData = {
   closing: {
     title: "Android membuat pesantren terasa dekat dengan wali dan alumni.",
     text: "Informasi tidak lagi tercecer di chat pribadi, tetapi tampil dalam aplikasi dengan hak akses, notifikasi, dan alur transaksi yang jelas.",
-    cta: "Bahas Aplikasi Android",
+    cta: "Minta Demo Android",
+    ctaUrl: whatsappDemoAndroidUrl,
   },
 };
 
