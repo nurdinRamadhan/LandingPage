@@ -1,3 +1,4 @@
+// Forced rebuild to resolve Vercel 404
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Geist, Geist_Mono } from "next/font/google";
