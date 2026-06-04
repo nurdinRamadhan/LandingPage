@@ -96,13 +96,13 @@ const ecosystem = [
 ];
 
 const screenshots = [
-  { src: "/screenshots/profile-ui.png", title: "Profil Santri", color: "bg-emerald-600" },
-  { src: "/screenshots/keuangan-ui.png", title: "Manajemen SPP", color: "bg-amber-500" },
-  { src: "/screenshots/hafalanQuran-ui.png", title: "Progres Tahfidz", color: "bg-emerald-500" },
-  { src: "/screenshots/Hafalan-ui.png", title: "Hafalan Kitab", color: "bg-emerald-700" },
-  { src: "/screenshots/pelanggaran-ui.png", title: "Catatan Disiplin", color: "bg-rose-500" },
-  { src: "/screenshots/kesehatan-ui.png", title: "Rekam Medis", color: "bg-sky-500" },
-  { src: "/screenshots/donasi-ui.png", title: "Portal Donasi", color: "bg-amber-600" },
+  { src: "/screenshots/profile-ui.png", title: "Profil Santri", color: "bg-emerald-900" },
+  { src: "/screenshots/keuangan-ui.png", title: "Manajemen SPP", color: "bg-amber-600" },
+  { src: "/screenshots/hafalanQuran-ui.png", title: "Progres Tahfidz", color: "bg-emerald-800" },
+  { src: "/screenshots/Hafalan-ui.png", title: "Hafalan Kitab", color: "bg-emerald-950" },
+  { src: "/screenshots/pelanggaran-ui.png", title: "Catatan Disiplin", color: "bg-emerald-700" },
+  { src: "/screenshots/kesehatan-ui.png", title: "Rekam Medis", color: "bg-emerald-600" },
+  { src: "/screenshots/donasi-ui.png", title: "Portal Donasi", color: "bg-amber-700" },
 ];
 
 const androidFeatureGroups = [
@@ -205,7 +205,7 @@ const adminFeatureGroups = [
   {
     title: "Tata Kelola Institusi",
     icon: MonitorCheck,
-    items: ["Manajemen hak akses", "Inventaris aset pesantren", "Pusat notifikasi massal", "Profil lembaga custom", "Log aktivitas admin", "Berita internal"],
+    items: ["Manajemen hak akses", "Inventaris aset pesantren", "Pusat notifikasi massal", "Profil pesantren custom", "Log aktivitas admin", "Berita internal"],
   },
   {
     title: "Komunitas Alumni",
@@ -291,10 +291,10 @@ const heroProofs = [
 ];
 
 const whatsappDemoAndroidUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20aplikasi%20Android%20SanadQu%20untuk%20%5Bnama%20pesantren%5D";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20aplikasi%20Android%20sanadQu%20untuk%20%5Bnama%20pesantren%5D";
 
 const whatsappDemoFullUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20full%20sistem%20SanadQu%20%28Admin%20Panel%20%26%20Android%29%20untuk%20%5Bnama%20pesantren%5D";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20full%20sistem%20sanadQu%20%28Admin%20Panel%20%26%20Android%29%20untuk%20%5Bnama%20pesantren%5D";
 
 const whatsappConversationUrl =
   "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20%5Bnama%5D%20dari%20Pondok%20Pesantren%20%5Bnama%5D.%20Kami%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20sanadQu.";
@@ -343,7 +343,7 @@ const faqs = [
   {
     question: "Dapatkah kami menyesuaikan dengan aturan pesantren?",
     answer:
-      "Tentu. SanadQu sangat fleksibel. Mulai dari istilah menu, format laporan, hingga alur persetujuan dapat disesuaikan dengan kebijakan internal lembaga Anda.",
+      "Tentu. sanadQu sangat fleksibel. Mulai dari istilah menu, format laporan, hingga alur persetujuan dapat disesuaikan dengan kebijakan internal pesantren.",
   },
   {
     question: "Bagaimana jika kami butuh bantuan teknis?",
@@ -365,7 +365,7 @@ const serviceSegments = [
   },
   {
     title: "Kustomisasi Identitas",
-    text: "Setiap pesantren unik. Kami menyesuaikan tampilan, logo, dan istilah sistem agar mencerminkan marwah dan wibawa lembaga Anda.",
+    text: "Setiap pesantren unik. Kami menyesuaikan tampilan, logo, dan istilah sistem agar mencerminkan marwah dan wibawa pesantren.",
     icon: PanelTop,
   },
   {
@@ -387,7 +387,7 @@ const implementationSteps = [
   },
   {
     title: "Perancangan",
-    text: "Menyusun konfigurasi modul dan hak akses yang paling sesuai dengan kebijakan lembaga.",
+    text: "Menyusun konfigurasi modul dan hak akses yang paling sesuai dengan kebijakan pesantren.",
   },
   {
     title: "Instalasi",
@@ -440,7 +440,7 @@ const impactMoments = [
   },
   {
     title: "Ketenangan Bagi Wali Santri.",
-    text: "Menerima notifikasi perkembangan anak secara otomatis, membangun kepercayaan yang lebih kuat antara wali dan lembaga.",
+    text: "Menerima notifikasi perkembangan anak secara otomatis, membangun kepercayaan yang lebih kuat antara wali dan pesantren.",
   },
   {
     title: "Keputusan Berbasis Data Nyata.",
@@ -548,7 +548,7 @@ const securityControlCards = [
 ];
 
 const customPoints = [
-  "Identitas Visual: Nama, logo, dan skema warna disesuaikan dengan marwah resmi lembaga pesantren Anda.",
+  "Identitas Visual: Nama, logo, dan skema warna disesuaikan dengan marwah resmi pesantren.",
   "Tata Kelola Dokumen: Kop surat, format rapor, dan istilah administratif mengikuti standar internal pondok.",
   "Modul Fleksibel: Fitur dapat diaktifkan secara bertahap sesuai dengan kesiapan sumber daya manusia di pesantren.",
   "Struktur Otoritas: Penentuan hak akses dan alur persetujuan dirancang mengikuti hierarki kepemimpinan pesantren.",
@@ -585,7 +585,7 @@ function DashboardMockup() {
       transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
       className="relative"
     >
-      <div className="absolute -inset-x-6 bottom-0 h-28 bg-emerald-900/10 blur-3xl dark:bg-amber-500/5" />
+      <div className="absolute -inset-x-6 bottom-0 h-28 bg-emerald-950/5 blur-3xl dark:bg-amber-500/5" />
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
@@ -594,8 +594,8 @@ function DashboardMockup() {
       >
         <div className="flex items-center gap-3">
           <span className="relative flex size-2.5">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500 opacity-60 dark:bg-amber-400" />
-            <span className="relative inline-flex size-2.5 rounded-full bg-emerald-600 dark:bg-amber-500" />
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-600 opacity-60 dark:bg-amber-400" />
+            <span className="relative inline-flex size-2.5 rounded-full bg-emerald-900 dark:bg-amber-500" />
           </span>
           <span className="text-xs font-bold tracking-tight text-slate-800 dark:text-amber-50">SISTEM OPERASIONAL AKTIF</span>
         </div>
@@ -615,7 +615,7 @@ function DashboardMockup() {
         <div className="relative">
           <Image
             src="/dashboard_light.png"
-            alt="Dasbor Admin SanadQu"
+            alt="Dasbor Admin sanadQu"
             width={1368}
             height={743}
             priority
@@ -623,7 +623,7 @@ function DashboardMockup() {
           />
           <Image
             src="/dashboard_dark.png"
-            alt="Dasbor Admin SanadQu"
+            alt="Dasbor Admin sanadQu"
             width={1368}
             height={743}
             priority
@@ -662,7 +662,8 @@ function DashboardMockup() {
 function ExperienceBridge() {
   return (
     <section className="relative bg-[#faf9f6] py-28 dark:bg-slate-950">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent dark:via-white/5" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-900/20 to-transparent dark:via-white/5" />
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <Reveal>
@@ -694,7 +695,7 @@ function ExperienceBridge() {
                 index === 1 ? "lg:translate-y-10" : ""
               }`}
             >
-              <div className="mb-10 flex size-12 items-center justify-center rounded-xl bg-slate-900 font-serif text-lg italic text-amber-400 transition-transform group-hover:scale-110 dark:bg-amber-500 dark:text-slate-950">
+              <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-slate-900 font-serif text-lg italic text-amber-500 transition-transform group-hover:scale-110 dark:bg-amber-500 dark:text-slate-950">
                 {index + 1}
               </div>
               <h3 className="text-2xl font-medium tracking-tight">{moment.title}</h3>
@@ -718,7 +719,7 @@ function ServiceDepthSection() {
               IMPLEMENTASI TERPANDU
             </Badge>
             <h2 className="text-4xl font-medium leading-tight tracking-tight sm:text-5xl">
-                Bukan sekadar software, tapi solusi transformasi lembaga.
+                Bukan sekadar software, tapi solusi transformasi pesantren.
             </h2>
           </div>
           <p className="text-xl font-light leading-relaxed text-slate-500 dark:text-slate-400">
@@ -744,7 +745,7 @@ function ServiceDepthSection() {
                   index === 1 || index === 3 ? "lg:translate-y-10" : ""
                 }`}
               >
-                <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-emerald-950 text-amber-400 dark:bg-amber-500/10 dark:text-amber-500">
+                <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-emerald-950 text-amber-500 dark:bg-amber-500/10 dark:text-amber-500">
                   <Icon className="size-7" />
                 </div>
                 <h3 className="text-2xl font-medium tracking-tight">{segment.title}</h3>
@@ -799,7 +800,7 @@ function ImplementationProcessSection() {
 
 function AndroidShowcaseSection() {
   return (
-    <section id="android" className="bg-[#eef4ef] py-32 dark:bg-slate-950">
+    <section id="android" className="bg-[#faf9f6] py-32 dark:bg-slate-950">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
           <Reveal>
@@ -890,7 +891,7 @@ function AndroidShowcaseSection() {
               >
                 <div className="group overflow-hidden rounded-2xl border border-white bg-white p-2.5 shadow-2xl transition-transform hover:-translate-y-2 dark:border-white/5 dark:bg-slate-900">
                   <div className="relative aspect-[9/16] overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-950">
-                    <Image src={shot.src} alt={`${shot.title} SanadQu`} fill className="object-cover" sizes="(min-width: 1024px) 18vw, 45vw" />
+                    <Image src={shot.src} alt={`${shot.title} sanadQu`} fill className="object-cover" sizes="(min-width: 1024px) 18vw, 45vw" />
                   </div>
                 </div>
                 <div className="mt-4 flex items-center justify-center gap-2">
@@ -918,7 +919,7 @@ function AndroidShowcaseSection() {
                 index === 1 || index === 3 ? "lg:translate-y-10" : ""
               }`}
             >
-              <div className="mb-8 font-serif text-3xl italic text-slate-200 dark:text-slate-800">
+              <div className="mb-8 font-serif text-3xl italic text-emerald-950/10 dark:text-amber-500/10">
                 0{index + 1}
               </div>
               <h3 className="text-xl font-medium tracking-tight">{point.title}</h3>
@@ -949,7 +950,7 @@ function AdminPanelShowcase() {
             </h2>
           </div>
           <p className="text-xl font-light leading-relaxed text-slate-400">
-            Didesain untuk efisiensi tingkat tinggi, Dasbor Admin SanadQu menyatukan validasi data EMIS, transparansi buku besar keuangan, hingga pengawasan berbasis AI dalam satu antarmuka yang elegan dan intuitif.
+            Didesain untuk efisiensi tingkat tinggi, Dasbor Admin sanadQu menyatukan validasi data EMIS, transparansi buku besar keuangan, hingga pengawasan berbasis AI dalam satu antarmuka yang elegan dan intuitif.
           </p>
         </Reveal>
 
@@ -1103,9 +1104,10 @@ function TechnologyStackSection() {
                     index % 2 ? "lg:mt-12" : ""
                   }`}
                 >
-                  <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-amber-500 text-slate-950 shadow-2xl shadow-amber-500/20 group-hover:scale-110 transition-transform">
+                  <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-emerald-950 text-amber-500 shadow-2xl shadow-emerald-950/20 group-hover:scale-110 transition-transform dark:bg-amber-500 dark:text-[#022c22]">
                     <Icon className="size-7" />
                   </div>
+
                   <h3 className="text-xl font-medium tracking-tight">{stack.title}</h3>
                   <p className="mt-4 text-sm font-light leading-relaxed text-slate-400">{stack.text}</p>
                 </motion.article>
@@ -1136,7 +1138,7 @@ function ReportingExportSection() {
           </p>
           <div className="mt-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-white/5 dark:bg-slate-900">
             <div className="relative aspect-[1368/743] bg-slate-50 dark:bg-slate-950">
-              <Image src="/scanqr.png" alt="Sistem QR SanadQu" fill className="object-cover" sizes="(min-width: 1024px) 45vw, 100vw" />
+              <Image src="/scanqr.png" alt="Sistem QR sanadQu" fill className="object-cover" sizes="(min-width: 1024px) 45vw, 100vw" />
             </div>
           </div>
         </Reveal>
@@ -1157,7 +1159,7 @@ function ReportingExportSection() {
                 transition={{ duration: 0.58 }}
                 className="rounded-2xl border border-slate-100 bg-white p-8 shadow-sm transition-all hover:shadow-xl dark:border-white/5 dark:bg-slate-900/50"
               >
-                <div className="mb-10 flex size-12 items-center justify-center rounded-xl bg-emerald-950 text-amber-400 dark:bg-amber-500/10 dark:text-amber-500">
+                <div className="mb-10 flex size-12 items-center justify-center rounded-xl bg-emerald-950 text-amber-500 dark:bg-amber-500/10 dark:text-amber-500">
                   <Icon className="size-6" />
                 </div>
                 <h3 className="text-xl font-medium tracking-tight">{feature.title}</h3>
@@ -1185,7 +1187,7 @@ function BonusWebsiteSection() {
               Wajah Digital Pesantren yang Berwibawa.
           </h2>
           <p className="mt-8 text-xl font-light leading-relaxed text-slate-600 dark:text-slate-400">
-              Paket implementasi SanadQu dilengkapi dengan website profil profesional. Menjadi gerbang pertama bagi calon wali santri untuk mengenal nilai dan keunggulan lembaga Anda.
+              Paket implementasi sanadQu dilengkapi dengan website profil profesional. Menjadi gerbang pertama bagi calon wali santri untuk mengenal nilai dan keunggulan pesantren.
           </p>
           <div className="mt-12">
             <Button
@@ -1243,7 +1245,7 @@ function ProblemSection() {
               Mengakhiri Kerumitan Administrasi Tradisional.
           </h2>
           <p className="mt-8 text-xl font-light leading-relaxed text-slate-500 dark:text-slate-400">
-              Masalah utama bukan pada ketidaktelitian, melainkan pada alat kerja yang belum menyatu. SanadQu hadir untuk menyelaraskan ritme kerja lembaga Anda.
+              Masalah utama bukan pada ketidaktelitian, melainkan pada alat kerja yang belum menyatu. sanadQu hadir untuk menyelaraskan ritme kerja pesantren.
           </p>
         </Reveal>
 
@@ -1262,7 +1264,7 @@ function ProblemSection() {
                 variants={fadeUp}
                 className="group rounded-2xl border border-slate-100 bg-[#faf9f6] p-10 transition-all hover:bg-white hover:shadow-2xl dark:border-white/5 dark:bg-slate-950"
               >
-                <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-slate-900 text-white transition-transform group-hover:scale-110 dark:bg-white/5 dark:text-slate-400">
+                <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-slate-900 text-white transition-transform group-hover:scale-110 dark:bg-emerald-950 dark:text-amber-500">
                   <Icon className="size-7" />
                 </div>
                 <h3 className="text-3xl font-medium tracking-tight">{problem.title}</h3>
@@ -1275,7 +1277,7 @@ function ProblemSection() {
         <Reveal delay={0.08}>
           <div className="mt-12 rounded-2xl bg-emerald-950 p-10 text-center text-white shadow-2xl dark:bg-slate-800">
             <p className="mx-auto max-w-4xl text-2xl font-light leading-relaxed">
-              &ldquo;SanadQu menyatukan seluruh elemen administrasi tanpa menambah beban kerja, melainkan menggantikan cara lama yang melelahkan dengan alur yang cerdas.&rdquo;
+              &ldquo;sanadQu menyatukan seluruh elemen administrasi tanpa menambah beban kerja, melainkan menggantikan cara lama yang melelahkan dengan alur yang cerdas.&rdquo;
             </p>
           </div>
         </Reveal>
@@ -1296,7 +1298,7 @@ function SocialProofSection() {
               Dibangun dari Kebutuhan Nyata di Lapangan.
           </h2>
           <p className="mt-8 text-xl font-light leading-relaxed text-slate-600 dark:text-slate-400">
-              Lahir dari pesantren, untuk pesantren. Setiap fitur diuji langsung dalam operasional harian untuk memastikan keberhasilan implementasi di lembaga Anda.
+              Lahir dari pesantren, untuk pesantren. Setiap fitur diuji langsung dalam operasional harian agar implementasi berjalan sesuai ritme dan kebutuhan pesantren.
           </p>
         </Reveal>
 
@@ -1354,10 +1356,10 @@ function DeveloperSection() {
           </h2>
           <div className="mt-10 space-y-8 text-xl font-light leading-relaxed text-slate-600 dark:text-slate-400">
             <p>
-              SanadQu bukan sekadar produk vendor IT biasa. Sistem ini lahir dari denyut nadi kehidupan pondok pesantren yang saya jalani setiap hari.
+              sanadQu bukan sekadar produk vendor IT biasa. Sistem ini lahir dari denyut nadi kehidupan pondok pesantren yang saya jalani setiap hari.
             </p>
             <p>
-              Kami tidak menggunakan asumsi pasar. Kami menggunakan pengalaman nyata dalam menangani rekap hafalan mingguan hingga kompleksitas laporan keuangan lembaga.
+              Kami tidak menggunakan asumsi pasar. Kami menggunakan pengalaman nyata dalam menangani rekap hafalan mingguan hingga kompleksitas laporan keuangan pesantren.
             </p>
             <p>
               Dedikasi kami adalah memastikan setiap pesantren memiliki alat yang pantas untuk menjaga marwah dan masa depannya di era digital.
@@ -1381,7 +1383,7 @@ function PricingSection() {
               Implementasi yang Selaras dengan Kapasitas Pesantren.
           </h2>
           <p className="mx-auto mt-10 max-w-4xl text-xl font-light leading-relaxed text-slate-600 dark:text-slate-400">
-            Investasi SanadQu dirancang untuk efisiensi jangka panjang. Memungkinkan lembaga Anda memiliki sistem sekelas korporat dengan skema biaya yang menghargai operasional pesantren.
+            Investasi sanadQu dirancang untuk efisiensi jangka panjang. Memungkinkan pesantren memiliki sistem sekelas korporat dengan skema biaya yang menghargai ritme operasionalnya.
           </p>
           <p className="mx-auto mt-6 max-w-4xl text-lg font-medium text-emerald-800 dark:text-amber-500/80 uppercase tracking-widest">
             KONSULTASI AWAL TANPA KOMITMEN.
@@ -1410,7 +1412,7 @@ function FaqSection() {
             KONSULTASI UMUM
           </Badge>
           <h2 className="text-4xl font-medium leading-tight tracking-tight sm:text-6xl">
-              Memahami SanadQu Lebih Dekat.
+              Memahami sanadQu Lebih Dekat.
           </h2>
         </Reveal>
 
@@ -1435,7 +1437,7 @@ export function LandingPage() {
 
   return (
     <main className="min-h-screen overflow-hidden bg-[#faf9f6] text-slate-900 dark:bg-slate-950 dark:text-slate-50">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/50 bg-white/70 backdrop-blur-2xl dark:border-white/5 dark:bg-slate-950/70">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-emerald-900/10 bg-[#faf9f6]/70 backdrop-blur-2xl dark:border-white/5 dark:bg-[#022c22]/70">
         <div className="border-b border-emerald-900/10 bg-emerald-950 py-2 text-white dark:border-amber-500/10 dark:bg-slate-900">
           <div className="mx-auto flex max-w-7xl items-center justify-center px-4 text-[10px] font-bold uppercase tracking-[0.15em] sm:justify-between sm:px-6 lg:px-8">
             <span className="hidden opacity-80 sm:inline">Transformasi Digital Pesantren Berbasis Amanah & Integritas</span>
@@ -1447,7 +1449,7 @@ export function LandingPage() {
         </div>
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <a href="#top" className="flex items-center gap-4" aria-label="sanadQu">
-            <span className="flex size-11 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-slate-900">
+            <span className="flex size-11 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-[#064e3b]">
               <Image src="/sanadQu-mark.svg" alt="" width={44} height={44} className="size-11" priority />
             </span>
             <div className="flex flex-col">
@@ -1483,7 +1485,7 @@ export function LandingPage() {
       </header>
 
       <section id="top" className="relative min-h-screen overflow-hidden pt-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(16,185,129,0.08),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(245,158,11,0.08),transparent_40%)] dark:bg-[radial-gradient(circle_at_20%_30%,rgba(34,211,238,0.05),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(245,158,11,0.05),transparent_40%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(16,185,129,0.08),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(245,158,11,0.08),transparent_40%)] dark:bg-[radial-gradient(circle_at_20%_30%,rgba(16,185,129,0.05),transparent_40%),radial-gradient(circle_at_80%_20%,rgba(245,158,11,0.05),transparent_40%)]" />
         <div className="absolute inset-0 opacity-[0.03] [background-image:linear-gradient(rgba(15,23,42,1)_1px,transparent_1px),linear-gradient(90deg,rgba(15,23,42,1)_1px,transparent_1px)] [background-size:64px_64px] dark:opacity-[0.05] dark:[background-image:linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)]" />
         
         <motion.div
@@ -1521,7 +1523,7 @@ export function LandingPage() {
               transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
               className="mt-10 max-w-2xl text-xl font-light leading-relaxed text-slate-600 sm:text-2xl dark:text-slate-300"
             >
-              SanadQu menyatukan administrasi Amanah, pengawasan santri yang Khidmah, dan teknologi AI yang Cerdas dalam satu ekosistem eksklusif.
+              sanadQu menyatukan administrasi Amanah, pengawasan santri yang Khidmah, dan teknologi AI yang Cerdas dalam satu ekosistem eksklusif.
             </motion.p>
 
             <motion.div variants={fadeUp} transition={{ delay: 0.25 }} className="mt-12 flex max-w-3xl flex-wrap justify-center gap-3">
@@ -1596,7 +1598,7 @@ export function LandingPage() {
                   whileHover={{ y: -10 }}
                   className="group rounded-2xl border border-slate-100 bg-slate-50 p-8 transition-all hover:bg-white hover:shadow-2xl dark:border-white/5 dark:bg-slate-950/50"
                 >
-                  <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-emerald-950 text-amber-400 transition-transform group-hover:scale-110 dark:bg-amber-500 dark:text-slate-950">
+                  <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-emerald-950 text-amber-500 transition-transform group-hover:scale-110 dark:bg-amber-500 dark:text-[#022c22]">
                     <Icon className="size-7" />
                   </div>
                   <h3 className="text-2xl font-medium tracking-tight">{item.title}</h3>
@@ -1615,9 +1617,11 @@ export function LandingPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.02 }}
-                  className="rounded-xl border border-white bg-white/50 px-4 py-4 text-center text-[11px] font-bold uppercase tracking-wider text-slate-600 shadow-sm dark:border-white/5 dark:bg-white/5 dark:text-slate-400"
                 >
-                  {module}
+                  <div className="rounded-xl border border-white bg-white/50 px-4 py-4 text-center text-[11px] font-bold uppercase tracking-wider text-emerald-950 shadow-sm dark:border-white/5 dark:bg-white/5 dark:text-amber-500/60">
+                    {module}
+                  </div>
+
                 </motion.div>
               ))}
             </div>
@@ -1635,7 +1639,7 @@ export function LandingPage() {
       <BonusWebsiteSection />
 
       <section id="keamanan" className="relative overflow-hidden bg-slate-950 py-32 text-slate-50">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(34,211,238,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.05)_1px,transparent_1px)] bg-[size:40px_40px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(245,158,11,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,0.04)_1px,transparent_1px)] bg-[size:40px_40px]" />
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
             <div>
@@ -1648,7 +1652,7 @@ export function LandingPage() {
               </h2>
             </div>
             <p className="text-xl font-light leading-relaxed text-slate-400">
-                Setiap data santri dan transaksi keuangan diperlakukan dengan standar keamanan perbankan digital. Memastikan integritas lembaga Anda terjaga secara absolut di ruang siber.
+                Setiap data santri dan transaksi keuangan diperlakukan dengan standar keamanan perbankan digital, menjaga integritas pesantren tetap kuat di ruang digital.
             </p>
           </Reveal>
 
@@ -1701,13 +1705,13 @@ export function LandingPage() {
           <Reveal>
             <Badge variant="outline" className="mb-6 rounded-full border-emerald-500/30 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">
                 <BadgeCheck className="mr-2 size-3" />
-              EKSKLUSIVITAS LEMBAGA
+              IDENTITAS PESANTREN
             </Badge>
             <h2 className="text-4xl font-medium leading-tight tracking-tight sm:text-6xl">
                 Sistem yang Beradaptasi dengan Identitas Pesantren.
             </h2>
             <p className="mt-8 text-xl font-light leading-relaxed text-slate-500 dark:text-slate-400">
-                Kami tidak memaksakan satu bentuk untuk semua. SanadQu dirancang agar tampil dan bekerja sesuai dengan marwah, wibawa, dan kebijakan internal masing-masing lembaga.
+                Kami tidak memaksakan satu bentuk untuk semua. sanadQu dirancang agar tampil dan bekerja sesuai dengan marwah, wibawa, dan kebijakan internal masing-masing pesantren.
             </p>
           </Reveal>
           <motion.div
@@ -1760,7 +1764,7 @@ export function LandingPage() {
             return (
               <Reveal key={item.title} delay={index * 0.08}>
                 <article className="group h-full rounded-2xl border border-slate-200 bg-white p-10 transition-all hover:shadow-2xl dark:border-white/5 dark:bg-slate-900/50">
-                  <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-[#faf9f6] text-emerald-800 transition-transform group-hover:scale-110 dark:bg-white/5 dark:text-amber-500">
+                  <div className="mb-10 flex size-14 items-center justify-center rounded-2xl bg-[#faf9f6] text-emerald-950 transition-transform group-hover:scale-110 dark:bg-emerald-950 dark:text-amber-500">
                     <Icon className="size-7" />
                   </div>
                   <h3 className="text-2xl font-medium tracking-tight">{item.title}</h3>
@@ -1792,7 +1796,7 @@ export function LandingPage() {
                 Mulai Percakapan, Temukan Solusi.
             </h2>
             <p className="mt-10 text-xl font-light leading-relaxed text-white/80">
-              Ceritakan kondisi lembaga Anda. Tidak perlu memutuskan sekarang. Mari berdiskusi tentang tantangan administrasi pesantren Anda dan bagaimana teknologi kami bisa membantu menyelesaikannya.
+              Ceritakan kondisi pesantren Anda. Tidak perlu memutuskan sekarang. Mari berdiskusi tentang tantangan administrasi pesantren dan bagaimana teknologi kami bisa membantu menyelesaikannya.
             </p>
             
             <div className="mx-auto mt-16 grid max-w-3xl gap-4 sm:grid-cols-2">
@@ -1823,11 +1827,11 @@ export function LandingPage() {
         </Reveal>
       </section>
 
-      <footer className="border-t border-slate-200 bg-[#faf9f6] px-4 py-16 dark:border-white/5 dark:bg-slate-950 sm:px-6 lg:px-8">
+      <footer className="border-t border-emerald-900/10 bg-[#faf9f6] px-4 py-16 dark:border-white/5 dark:bg-[#022c22] sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-4">
-               <span className="flex size-10 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-slate-900">
+               <span className="flex size-10 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-[#064e3b]">
                   <Image src="/sanadQu-mark.svg" alt="" width={40} height={40} className="size-10" />
                 </span>
                 <div className="flex flex-col">
@@ -1853,7 +1857,7 @@ export function LandingPage() {
             ))}
           </div>
           <div className="mt-16 pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-             <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 SanadQu. All Rights Reserved.</p>
+             <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 sanadQu. All Rights Reserved.</p>
              <div className="flex gap-8">
                 {["Terms", "Privacy", "Security"].map(item => (
                     <a key={item} href="#" className="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-emerald-800 dark:hover:text-amber-400">{item}</a>

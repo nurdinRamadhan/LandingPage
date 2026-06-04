@@ -59,7 +59,7 @@ export function ThemeToggle() {
       aria-label={isDark ? "Aktifkan mode terang" : "Aktifkan mode gelap"}
       title={isDark ? "Mode terang" : "Mode gelap"}
       onClick={toggleTheme}
-      className="border-emerald-200/70 bg-white/75 text-slate-900 shadow-sm backdrop-blur hover:bg-white dark:border-cyan-400/30 dark:bg-slate-950/70 dark:text-cyan-100 dark:hover:bg-slate-900"
+      className="border-emerald-200/70 bg-white/75 text-slate-900 shadow-sm backdrop-blur hover:bg-white dark:border-amber-500/30 dark:bg-[#064e3b]/70 dark:text-amber-100 dark:hover:bg-emerald-950"
     >
       {isDark ? <Sun className="size-4" /> : <Moon className="size-4" />}
     </Button>

@@ -110,10 +110,10 @@ const stagger = {
 };
 
 export const whatsappDemoAndroidUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20aplikasi%20Android%20SanadQu%20untuk%20%5Bnama%20pesantren%5D";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20aplikasi%20Android%20sanadQu%20untuk%20%5Bnama%20pesantren%5D";
 
 export const whatsappDemoFullUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20full%20sistem%20SanadQu%20%28Admin%20Panel%20%26%20Android%29%20untuk%20%5Bnama%20pesantren%5D";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20full%20sistem%20sanadQu%20%28Admin%20Panel%20%26%20Android%29%20untuk%20%5Bnama%20pesantren%5D";
 
 export const whatsappConversationUrl =
   "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20%5Bnama%5D%20dari%20Pondok%20Pesantren%20%5Bnama%5D.%20Kami%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20sanadQu.";
@@ -160,10 +160,10 @@ function DetailCardView({ card, index }: { card: DetailCard; index: number }) {
 export function DetailPage({ data }: { data: DetailPageData }) {
   return (
     <main className="min-h-screen bg-[#faf9f6] text-slate-900 dark:bg-slate-950 dark:text-slate-50">
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-slate-200/50 bg-white/70 backdrop-blur-2xl dark:border-white/5 dark:bg-slate-950/70">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-emerald-900/10 bg-[#faf9f6]/70 backdrop-blur-2xl dark:border-white/5 dark:bg-[#022c22]/70">
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-4">
-            <span className="flex size-11 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-slate-900">
+            <span className="flex size-11 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-[#064e3b]">
               <Image src="/sanadQu-mark.svg" alt="" width={44} height={44} className="size-11" priority />
             </span>
             <div className="flex flex-col">
@@ -326,7 +326,7 @@ export function DetailPage({ data }: { data: DetailPageData }) {
             </p>
           </div>
           <div className="mt-16 pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-             <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 SanadQu. All Rights Reserved.</p>
+             <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 sanadQu. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
