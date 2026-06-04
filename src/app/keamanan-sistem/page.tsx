@@ -3,9 +3,12 @@ import type { Metadata } from "next";
 import { DetailPage, type DetailPageData, whatsappDemoFullUrl, whatsappConversationUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
-  title: "Keamanan Sistem | sanadQu",
+  title: "Keamanan Sistem",
   description:
     "Protokol keamanan tingkat tinggi sanadQu: Klasifikasi data merah/kuning, enkripsi field-level pgcrypto, Android Keystore hardware-backed, and obrolan E2EE Chat alumni.",
+  alternates: {
+    canonical: "/keamanan-sistem",
+  },
 };
 
 const data: DetailPageData = {

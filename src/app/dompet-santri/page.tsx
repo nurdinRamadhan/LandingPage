@@ -3,9 +3,12 @@ import type { Metadata } from "next";
 import { DetailPage, type DetailPageData, whatsappDemoFullUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
-  title: "Dompet Santri | sanadQu",
+  title: "Dompet Santri",
   description:
     "Dompet Santri sanadQu: dompet tertutup (closed-loop), isi ulang Midtrans, QR/NFC kantin, prioritas buku besar (ledger-first), pencairan merchant, sengketa, rekonsiliasi, hash-chain, dan audit keamanan.",
+  alternates: {
+    canonical: "/dompet-santri",
+  },
 };
 
 const data: DetailPageData = {

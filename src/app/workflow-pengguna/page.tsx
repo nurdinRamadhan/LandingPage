@@ -3,9 +3,12 @@ import type { Metadata } from "next";
 import { DetailPage, type DetailPageData, whatsappDemoFullUrl, whatsappConversationUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
-  title: "Alur Kerja Pengguna | sanadQu",
+  title: "Alur Kerja Pengguna",
   description:
     "Panduan alur kerja pengguna sanadQu untuk kesantrian, bendahara, rois, admin utama, wali santri, kantin, alumni, dan penanganan masalah operasional.",
+  alternates: {
+    canonical: "/workflow-pengguna",
+  },
 };
 
 const data: DetailPageData = {

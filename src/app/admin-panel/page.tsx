@@ -3,9 +3,12 @@ import type { Metadata } from "next";
 import { DetailPage, type DetailPageData, whatsappDemoAndroidUrl, whatsappDemoFullUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
-  title: "Admin Panel | sanadQu",
+  title: "Admin Panel",
   description:
     "Detail fitur Admin Panel sanadQu: Dasbor, EMIS, kesantrian, tahfidz, keuangan, Dompet Santri, kantin, alumni, inventaris, notifikasi, AI/RAG, dan Pusat Kendali Backend.",
+  alternates: {
+    canonical: "/admin-panel",
+  },
 };
 
 const data: DetailPageData = {

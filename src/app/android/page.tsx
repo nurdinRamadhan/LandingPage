@@ -3,9 +3,12 @@ import type { Metadata } from "next";
 import { DetailPage, type DetailPageData, whatsappDemoAndroidUrl, whatsappDemoFullUrl } from "@/components/detail-page";
 
 export const metadata: Metadata = {
-  title: "Aplikasi Android | sanadQu",
+  title: "Aplikasi Android",
   description:
     "Detail aplikasi Android sanadQu untuk wali santri, alumni, kantin, donatur, dan layanan publik pesantren.",
+  alternates: {
+    canonical: "/android",
+  },
 };
 
 const data: DetailPageData = {

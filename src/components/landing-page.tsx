@@ -1839,6 +1839,19 @@ export function LandingPage() {
               Ekosistem digital eksklusif yang dirancang untuk menjaga marwah dan efisiensi operasional pondok pesantren modern.
             </p>
           </div>
+          <div className="mt-12 grid gap-4 text-[10px] font-bold uppercase tracking-widest text-slate-400 sm:grid-cols-2 lg:grid-cols-5">
+            {[
+              ["Sistem Digital Pesantren", "/sistem-digital-pesantren"],
+              ["Digitalisasi Pesantren", "/digitalisasi-pesantren"],
+              ["Jasa Aplikasi Pesantren", "/jasa-pembuatan-aplikasi-pesantren"],
+              ["Aplikasi Pesantren", "/aplikasi-pesantren"],
+              ["Software Pesantren", "/software-pesantren"],
+            ].map(([label, href]) => (
+              <Link key={href} href={href} className="transition-colors hover:text-emerald-800 dark:hover:text-amber-400">
+                {label}
+              </Link>
+            ))}
+          </div>
           <div className="mt-16 pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
              <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 SanadQu. All Rights Reserved.</p>
              <div className="flex gap-8">
