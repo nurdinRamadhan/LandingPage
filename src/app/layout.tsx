@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "pesantrenPro | Sistem Digital Pesantren",
+  title: "sanadQu | Sistem Digital Pesantren",
   description:
     "Ekosistem admin panel, aplikasi Android, backend, PostgreSQL, AI, dan keamanan berlapis untuk pesantren.",
 };

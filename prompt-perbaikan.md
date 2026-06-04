@@ -33,7 +33,7 @@ yang harus diperbaiki :
    Padding tidak konsisten
 
 Tugas Anda sekarang adalah :
-PROMPT: Revisi Landing Page pesantrenPro
+PROMPT: Revisi Landing Page sanadQu
 
 KONTEKS:
 Kamu adalah copywriter dan UI/UX designer senior yang
@@ -65,7 +65,7 @@ Opsi C: [NAMA PESANTREN KLIEN] punya sistem sendiri.
          Bukan pinjaman, bukan titipan vendor luar.
 
 SUB-HEADLINE — tulis ulang menjadi:
-"pesantrenPro dibangun dari dalam pesantren — bukan
+"sanadQu dibangun dari dalam pesantren — bukan
  dari asumsi konsultan IT. Admin panel, Android untuk
  wali, website publik, dan keamanan berlapis tersaji
  dalam satu ekosistem yang bisa disesuaikan penuh
@@ -75,7 +75,7 @@ CTA UTAMA — ubah menjadi:
 [Lihat Demo Nyata] → link ke section screenshot/video
 [Hubungi Langsung] → WhatsApp dengan pesan pre-filled:
 "Assalamu'alaikum, saya ingin mengetahui lebih lanjut
- tentang pesantrenPro untuk [nama pesantren]"
+ tentang sanadQu untuk [nama pesantren]"
 
 TAMBAHKAN di bawah hero:
 Trust bar berisi:
@@ -111,7 +111,7 @@ Kartu 4: 📂
  Excel pengurus, buku catatan ustadz,
  dan kepala santri masing-masing."
 
-Lalu: "pesantrenPro menyatukan semuanya.
+Lalu: "sanadQu menyatukan semuanya.
        Bukan dengan menambah beban kerja,
        tapi dengan menggantikan cara lama."
 
@@ -150,7 +150,7 @@ Tulis section singkat:
 Judul: "Dibangun oleh santri, untuk pesantren."
 
 Isi:
-"pesantrenPro dikembangkan oleh [Nama Kamu],
+"sanadQu dikembangkan oleh [Nama Kamu],
  santri aktif di Pondok Pesantren Al-Hasanah
  Cibeuti, Tasikmalaya. Sistem ini lahir dari
  kebutuhan nyata yang dirasakan sehari-hari —
@@ -174,7 +174,7 @@ Tapi berikan anchor yang jelas:
 Judul: "Implementasi yang masuk akal untuk pesantren."
 
 Isi:
-"Biaya langganan bulanan pesantrenPro dirancang
+"Biaya langganan bulanan sanadQu dirancang
  lebih kecil dari gaji satu staf administrasi
  — tapi menggantikan pekerjaan yang biasanya
  butuh 2-3 orang.
@@ -217,7 +217,7 @@ A: "Developer aktif dan bisa dihubungi langsung
 BAGIAN 7: FINAL CTA — REWRITE
 ============================================
 
-Ubah dari: "Siapkan demo pesantrenPro untuk
+Ubah dari: "Siapkan demo sanadQu untuk
             penawaran berikutnya."
 
 Menjadi:
@@ -229,14 +229,14 @@ Isi:
  apa yang sedang dipakai, dan apa yang paling
  menyulitkan pengurus saat ini.
 
- Dari sana, baru kita lihat apakah pesantrenPro
+ Dari sana, baru kita lihat apakah sanadQu
  cocok atau tidak."
 
 CTA: [Mulai Percakapan via WhatsApp]
 Pre-filled pesan WA:
 "Assalamu'alaikum, saya [nama] dari Pondok
  Pesantren [nama]. Kami ingin mengetahui lebih
- lanjut tentang pesantrenPro."
+ lanjut tentang sanadQu."
 
 ============================================
 VISUAL & UX — CHECKLIST PERUBAHAN
@@ -284,13 +284,13 @@ TONE OF VOICE — PANDUAN MENULIS
 ============================================
 
 JANGAN tulis seperti ini (terasa AI/korporat):
-"pesantrenPro hadir sebagai solusi komprehensif
+"sanadQu hadir sebagai solusi komprehensif
  yang memungkinkan pesantren menavigasi era
  transformasi digital dengan lebih efektif."
 
 TULIS seperti ini (terasa manusia/pesantren):
 "Pengurus tidak perlu belajar sistem baru dari nol.
- pesantrenPro menyesuaikan diri dengan cara kerja
+ sanadQu menyesuaikan diri dengan cara kerja
  yang sudah berjalan — bukan sebaliknya."
 
 Prinsip:

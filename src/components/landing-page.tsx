@@ -215,7 +215,7 @@ const adminFeatureGroups = [
   {
     title: "AI & Analisis Sistem",
     icon: ShieldCheck,
-    items: ["Analisis perilaku data", "Rekomendasi strategis AI", "Audit keamanan real-time", "Pusat kendali backend", "Laporan cerdas PDF/Excel", "Self-healing system"],
+    items: ["Analisis perilaku data", "Rekomendasi strategis AI", "Audit keamanan real-time", "Pusat kendali backend", "Laporan cerdas PDF/Excel", "Self-healing sistem"],
   },
 ];
 
@@ -249,24 +249,24 @@ const technologyStacks = [
     text: "Menggunakan standar teknologi korporat modern yang responsif dan memudahkan input data masif secara cepat.",
   },
   {
-    title: "Mobile App Android",
+    title: "Aplikasi Mobile Android",
     icon: Smartphone,
-    text: "Aplikasi native with high level of security to protect personal data and santri financial transactions.",
+    text: "Aplikasi native dengan tingkat keamanan tinggi untuk melindungi data pribadi dan transaksi finansial santri.",
   },
   {
     title: "Layanan Website",
     icon: Code2,
-    text: "The elegant digital face of the pesantren, supporting light and dark modes according to user comfort.",
+    text: "Wajah digital pesantren yang elegan, mendukung mode terang dan gelap sesuai kenyamanan pengguna.",
   },
   {
     title: "Layanan Backend",
     icon: Server,
-    text: "A robust data processing engine behind the scenes, handling validation, notifications, and third-party integration.",
+    text: "Mesin pengolah data yang tangguh di balik layar, menangani validasi, notifikasi, dan integrasi pihak ketiga.",
   },
   {
     title: "Basis Data Amanah",
     icon: Database,
-    text: "Structured data storage with bank-grade encryption and a permanent audit log system.",
+    text: "Penyimpanan data yang terstruktur dengan enkripsi tingkat perbankan dan sistem audit log yang permanen.",
   },
 ];
 
@@ -291,13 +291,13 @@ const heroProofs = [
 ];
 
 const whatsappDemoAndroidUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20aplikasi%20Android%20PesantrenPro%20untuk%20%5Bnama%20pesantren%5D";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20aplikasi%20Android%20SanadQu%20untuk%20%5Bnama%20pesantren%5D";
 
 const whatsappDemoFullUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20full%20sistem%20PesantrenPro%20%28Admin%20Panel%20%26%20Android%29%20untuk%20%5Bnama%20pesantren%5D";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20full%20sistem%20SanadQu%20%28Admin%20Panel%20%26%20Android%29%20untuk%20%5Bnama%20pesantren%5D";
 
 const whatsappConversationUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20%5Bnama%5D%20dari%20Pondok%20Pesantren%20%5Bnama%5D.%20Kami%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20pesantrenPro.";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20%5Bnama%5D%20dari%20Pondok%20Pesantren%20%5Bnama%5D.%20Kami%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20sanadQu.";
 
 const problemCards = [
   {
@@ -312,12 +312,12 @@ const problemCards = [
   },
   {
     title: "Risiko Kesalahan Input",
-    text: "Tanpa validasi otomatis, data SPP and hafalan rentan tertukar atau hilang, memicu ketidakpercayaan wali santri.",
+    text: "Tanpa validasi otomatis, data SPP dan hafalan rentan tertukar atau hilang, memicu ketidakpercayaan wali santri.",
     icon: BellRing,
   },
   {
     title: "Laporan yang Lambat",
-    text: "Menyusun laporan bulanan or EMIS membutuhkan waktu berhari-hari karena data harus dikumpulkan secara manual.",
+    text: "Menyusun laporan bulanan atau EMIS membutuhkan waktu berhari-hari karena data harus dikumpulkan secara manual.",
     icon: FileSpreadsheet,
   },
 ];
@@ -333,17 +333,17 @@ const faqs = [
   {
     question: "Bagaimana jaminan keamanan data kami?",
     answer:
-      "Kami menerapkan standar keamanan perbankan digital. Data pribadi santri dienkripsi, and akses ke sistem dibatasi dengan otorisasi ketat yang dapat diaudit kapan saja.",
+      "Kami menerapkan standar keamanan perbankan digital. Data pribadi santri dienkripsi, dan akses ke sistem dibatasi dengan otorisasi ketat yang dapat diaudit kapan saja.",
   },
   {
     question: "Apakah sistem ini sulit dioperasikan?",
     answer:
-      "Tidak. Dasbor kami dirancang sangat intuitif bagi pengguna non-teknis. Kami juga menyediakan pendampingan and pelatihan sampai tim pesantren mahir.",
+      "Tidak. Dasbor kami dirancang sangat intuitif bagi pengguna non-teknis. Kami juga menyediakan pendampingan dan pelatihan sampai tim pesantren mahir.",
   },
   {
     question: "Dapatkah kami menyesuaikan dengan aturan pesantren?",
     answer:
-      "Tentu. PesantrenPro sangat fleksibel. Mulai dari istilah menu, format laporan, hingga alur persetujuan dapat disesuaikan dengan kebijakan internal lembaga Anda.",
+      "Tentu. SanadQu sangat fleksibel. Mulai dari istilah menu, format laporan, hingga alur persetujuan dapat disesuaikan dengan kebijakan internal lembaga Anda.",
   },
   {
     question: "Bagaimana jika kami butuh bantuan teknis?",
@@ -353,7 +353,7 @@ const faqs = [
   {
     question: "Apakah sistem ini mendukung pendaftaran santri baru?",
     answer:
-      "Ya, sistem memiliki modul pendaftaran online yang terintegrasi langsung dengan database induk and EMIS, memudahkan transisi santri baru.",
+      "Ya, sistem memiliki modul pendaftaran online yang terintegrasi langsung dengan database induk dan EMIS, memudahkan transisi santri baru.",
   },
 ];
 
@@ -365,7 +365,7 @@ const serviceSegments = [
   },
   {
     title: "Kustomisasi Identitas",
-    text: "Setiap pesantren unik. Kami menyesuaikan tampilan, logo, and istilah sistem agar mencerminkan marwah and wibawa lembaga Anda.",
+    text: "Setiap pesantren unik. Kami menyesuaikan tampilan, logo, dan istilah sistem agar mencerminkan marwah dan wibawa lembaga Anda.",
     icon: PanelTop,
   },
   {
@@ -383,19 +383,19 @@ const serviceSegments = [
 const implementationSteps = [
   {
     title: "Pemetaan",
-    text: "Menganalisis struktur organisasi and kebutuhan spesifik administrasi pesantren Anda.",
+    text: "Menganalisis struktur organisasi dan kebutuhan spesifik administrasi pesantren Anda.",
   },
   {
     title: "Perancangan",
-    text: "Menyusun konfigurasi modul and hak akses yang paling sesuai dengan kebijakan lembaga.",
+    text: "Menyusun konfigurasi modul dan hak akses yang paling sesuai dengan kebijakan lembaga.",
   },
   {
     title: "Instalasi",
-    text: "Pemasangan infrastruktur cloud and penyiapan aplikasi Android untuk wali santri.",
+    text: "Pemasangan infrastruktur cloud dan penyiapan aplikasi Android untuk wali santri.",
   },
   {
     title: "Pelatihan",
-    text: "Edukasi intensif bagi operator and pengurus agar mampu mengelola sistem secara mandiri.",
+    text: "Edukasi intensif bagi operator dan pengurus agar mampu mengelola sistem secara mandiri.",
   },
   {
     title: "Peresmian",
@@ -419,7 +419,7 @@ const reportingFeatures = [
   {
     title: "Dokumen PDF Berstempel",
     icon: FileText,
-    text: "Cetak bukti pembayaran, surat izin, and laporan kesehatan dalam format PDF profesional yang siap arsip.",
+    text: "Cetak bukti pembayaran, surat izin, dan laporan kesehatan dalam format PDF profesional yang siap arsip.",
   },
   {
     title: "Jejak Audit Transparan",
@@ -436,11 +436,11 @@ const reportingFeatures = [
 const impactMoments = [
   {
     title: "Dasbor Sebagai Pusat Kendali Pagi.",
-    text: "Melihat statistik kesehatan, tagihan tertunda, and hafalan terbaru sebelum memulai agenda harian pesantren.",
+    text: "Melihat statistik kesehatan, tagihan tertunda, dan hafalan terbaru sebelum memulai agenda harian pesantren.",
   },
   {
     title: "Ketenangan Bagi Wali Santri.",
-    text: "Menerima notifikasi perkembangan anak secara otomatis, membangun kepercayaan yang lebih kuat antara wali and lembaga.",
+    text: "Menerima notifikasi perkembangan anak secara otomatis, membangun kepercayaan yang lebih kuat antara wali dan lembaga.",
   },
   {
     title: "Keputusan Berbasis Data Nyata.",
@@ -483,13 +483,13 @@ const securityControlCards = [
     title: "Komunikasi Privat",
     label: "End-to-End Encryption",
     icon: Send,
-    text: "Isi pesan antar pengguna dirancang agar hanya pengirim and penerima yang bisa membaca, menjaga privasi alumni.",
+    text: "Isi pesan antar pengguna dirancang agar hanya pengirim dan penerima yang bisa membaca, menjaga privasi alumni.",
   },
   {
     title: "Buku Besar Digital",
     label: "Financial Integrity",
     icon: WalletCards,
-    text: "Riwayat keuangan tidak bisa dihapus or diubah tanpa meninggalkan jejak audit, menjamin keterbukaan dana.",
+    text: "Riwayat keuangan tidak bisa dihapus atau diubah tanpa meninggalkan jejak audit, menjamin keterbukaan dana.",
   },
   {
     title: "Kontrol Akses Berlapis",
@@ -507,7 +507,7 @@ const securityControlCards = [
     title: "Isolasi Kunci Rahasia",
     label: "Secret Management",
     icon: Server,
-    text: "Kunci integrasi bank and sistem luar dijaga di lapisan backend terdalam, jauh dari jangkauan publik.",
+    text: "Kunci integrasi bank dan sistem luar dijaga di lapisan backend terdalam, jauh dari jangkauan publik.",
   },
   {
     title: "Proteksi Transaksi Ganda",
@@ -519,7 +519,7 @@ const securityControlCards = [
     title: "Log Audit Permanen",
     label: "Operational Trace",
     icon: MonitorCheck,
-    text: "Merekam setiap langkah penting admin sebagai bahan evaluasi and bukti jika terjadi selisih informasi.",
+    text: "Merekam setiap langkah penting admin sebagai bahan evaluasi dan bukti jika terjadi selisih informasi.",
   },
   {
     title: "Pusat Diagnostik Sistem",
@@ -531,7 +531,7 @@ const securityControlCards = [
     title: "Sanitasi Kecerdasan AI",
     label: "Safe Intelligence",
     icon: Sparkles,
-    text: "Menjamin interaksi dengan AI tidak membocorkan data pribadi or informasi rahasia pesantren.",
+    text: "Menjamin interaksi dengan AI tidak membocorkan data pribadi atau informasi rahasia pesantren.",
   },
   {
     title: "Keamanan Notifikasi",
@@ -543,15 +543,15 @@ const securityControlCards = [
     title: "Enkripsi Jalur Komunikasi",
     label: "Network Hardening",
     icon: Globe2,
-    text: "Seluruh pertukaran data antara aplikasi and server dilindungi protokol perbankan (TLS) yang paling aman.",
+    text: "Seluruh pertukaran data antara aplikasi dan server dilindungi protokol perbankan (TLS) yang paling aman.",
   },
 ];
 
 const customPoints = [
-  "Identitas Visual: Nama, logo, and skema warna disesuaikan dengan marwah resmi lembaga pesantren Anda.",
-  "Tata Kelola Dokumen: Kop surat, format rapor, and istilah administratif mengikuti standar internal pondok.",
+  "Identitas Visual: Nama, logo, dan skema warna disesuaikan dengan marwah resmi lembaga pesantren Anda.",
+  "Tata Kelola Dokumen: Kop surat, format rapor, dan istilah administratif mengikuti standar internal pondok.",
   "Modul Fleksibel: Fitur dapat diaktifkan secara bertahap sesuai dengan kesiapan sumber daya manusia di pesantren.",
-  "Struktur Otoritas: Penentuan hak akses and alur persetujuan dirancang mengikuti hierarki kepemimpinan pesantren.",
+  "Struktur Otoritas: Penentuan hak akses dan alur persetujuan dirancang mengikuti hierarki kepemimpinan pesantren.",
 ];
 
 function Reveal({
@@ -608,14 +608,14 @@ function DashboardMockup() {
             <span className="size-3 rounded-full bg-slate-200 dark:bg-slate-800" />
           </div>
           <div className="rounded-lg border border-slate-200/50 bg-slate-100/50 px-4 py-1.5 font-mono text-[10px] font-medium tracking-wider text-slate-400 dark:border-slate-800/50 dark:bg-slate-950/50 dark:text-slate-500">
-            ADMIN.PESANTRENPRO.ID
+            ADMIN.SANADQU.ID
           </div>
         </div>
 
         <div className="relative">
           <Image
             src="/dashboard_light.png"
-            alt="Dasbor Admin PesantrenPro"
+            alt="Dasbor Admin SanadQu"
             width={1368}
             height={743}
             priority
@@ -623,7 +623,7 @@ function DashboardMockup() {
           />
           <Image
             src="/dashboard_dark.png"
-            alt="Dasbor Admin PesantrenPro"
+            alt="Dasbor Admin SanadQu"
             width={1368}
             height={743}
             priority
@@ -636,7 +636,7 @@ function DashboardMockup() {
             className="absolute bottom-6 left-6 hidden max-w-[240px] rounded-xl border border-white/60 bg-white/80 p-5 shadow-2xl backdrop-blur-2xl dark:border-white/10 dark:bg-slate-900/90 md:block"
           >
             <p className="text-[10px] font-bold uppercase tracking-widest text-emerald-700 dark:text-amber-500">KENDALI PUSAT</p>
-            <p className="mt-2 text-sm font-medium leading-relaxed text-slate-900 dark:text-white">Kelola data santri, keuangan, and laporan dalam satu alur yang tertib.</p>
+            <p className="mt-2 text-sm font-medium leading-relaxed text-slate-900 dark:text-white">Kelola data santri, keuangan, dan laporan dalam satu alur yang tertib.</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 18 }}
@@ -722,7 +722,7 @@ function ServiceDepthSection() {
             </h2>
           </div>
           <p className="text-xl font-light leading-relaxed text-slate-500 dark:text-slate-400">
-            Kami memahami bahwa teknologi hanyalah alat. Keberhasilan digitalisasi pesantren bergantung pada keselarasan sistem dengan nilai-nilai tradisional and kesiapan sumber daya manusia yang ada.
+            Kami memahami bahwa teknologi hanyalah alat. Keberhasilan digitalisasi pesantren bergantung pada keselarasan sistem dengan nilai-nilai tradisional dan kesiapan sumber daya manusia yang ada.
           </p>
         </Reveal>
 
@@ -772,7 +772,7 @@ function ImplementationProcessSection() {
               Tahapan Terukur Menuju Ekosistem Digital Berkelanjutan.
           </h2>
           <p className="mt-8 text-xl font-light leading-relaxed text-slate-500 dark:text-slate-400">
-              Setiap langkah dirancang untuk meminimalisir hambatan operasional and memaksimalkan penerimaan teknologi oleh seluruh pengurus pesantren.
+              Setiap langkah dirancang untuk meminimalisir hambatan operasional dan memaksimalkan penerimaan teknologi oleh seluruh pengurus pesantren.
           </p>
         </Reveal>
 
@@ -811,7 +811,7 @@ function AndroidShowcaseSection() {
               Satu Aplikasi. Kedekatan Tanpa Batas.
             </h2>
             <p className="mt-8 text-xl font-light leading-relaxed text-slate-600 dark:text-slate-400">
-              Menghubungkan wali santri, alumni, and unit usaha pesantren dalam satu genggaman yang aman. Memastikan setiap informasi tersampaikan dengan wibawa and ketepatan data.
+              Menghubungkan wali santri, alumni, dan unit usaha pesantren dalam satu genggaman yang aman. Memastikan setiap informasi tersampaikan dengan wibawa dan ketepatan data.
             </p>
             <div className="mt-10 grid gap-4">
               {[
@@ -890,7 +890,7 @@ function AndroidShowcaseSection() {
               >
                 <div className="group overflow-hidden rounded-2xl border border-white bg-white p-2.5 shadow-2xl transition-transform hover:-translate-y-2 dark:border-white/5 dark:bg-slate-900">
                   <div className="relative aspect-[9/16] overflow-hidden rounded-xl bg-slate-100 dark:bg-slate-950">
-                    <Image src={shot.src} alt={`${shot.title} PesantrenPro`} fill className="object-cover" sizes="(min-width: 1024px) 18vw, 45vw" />
+                    <Image src={shot.src} alt={`${shot.title} SanadQu`} fill className="object-cover" sizes="(min-width: 1024px) 18vw, 45vw" />
                   </div>
                 </div>
                 <div className="mt-4 flex items-center justify-center gap-2">
@@ -949,7 +949,7 @@ function AdminPanelShowcase() {
             </h2>
           </div>
           <p className="text-xl font-light leading-relaxed text-slate-400">
-            Didesain untuk efisiensi tingkat tinggi, Dasbor Admin PesantrenPro menyatukan validasi data EMIS, transparansi buku besar keuangan, hingga pengawasan berbasis AI dalam satu antarmuka yang elegan and intuitif.
+            Didesain untuk efisiensi tingkat tinggi, Dasbor Admin SanadQu menyatukan validasi data EMIS, transparansi buku besar keuangan, hingga pengawasan berbasis AI dalam satu antarmuka yang elegan dan intuitif.
           </p>
         </Reveal>
 
@@ -1072,7 +1072,7 @@ function TechnologyStackSection() {
           </div>
           <div>
             <p className="text-xl font-light leading-relaxed text-slate-400">
-                Setiap baris kode disusun untuk memastikan sistem tetap responsif, aman, and mudah dikembangkan seiring bertumbuhnya pesantren Anda.
+                Setiap baris kode disusun untuk memastikan sistem tetap responsif, aman, dan mudah dikembangkan seiring bertumbuhnya pesantren Anda.
             </p>
             <div className="mt-10 flex flex-wrap gap-2">
               {stackHighlights.map((item) => (
@@ -1136,7 +1136,7 @@ function ReportingExportSection() {
           </p>
           <div className="mt-12 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-white/5 dark:bg-slate-900">
             <div className="relative aspect-[1368/743] bg-slate-50 dark:bg-slate-950">
-              <Image src="/scanqr.png" alt="Sistem QR PesantrenPro" fill className="object-cover" sizes="(min-width: 1024px) 45vw, 100vw" />
+              <Image src="/scanqr.png" alt="Sistem QR SanadQu" fill className="object-cover" sizes="(min-width: 1024px) 45vw, 100vw" />
             </div>
           </div>
         </Reveal>
@@ -1185,7 +1185,7 @@ function BonusWebsiteSection() {
               Wajah Digital Pesantren yang Berwibawa.
           </h2>
           <p className="mt-8 text-xl font-light leading-relaxed text-slate-600 dark:text-slate-400">
-              Paket implementasi PesantrenPro dilengkapi dengan website profil profesional. Menjadi gerbang pertama bagi calon wali santri untuk mengenal nilai and keunggulan lembaga Anda.
+              Paket implementasi SanadQu dilengkapi dengan website profil profesional. Menjadi gerbang pertama bagi calon wali santri untuk mengenal nilai dan keunggulan lembaga Anda.
           </p>
           <div className="mt-12">
             <Button
@@ -1243,7 +1243,7 @@ function ProblemSection() {
               Mengakhiri Kerumitan Administrasi Tradisional.
           </h2>
           <p className="mt-8 text-xl font-light leading-relaxed text-slate-500 dark:text-slate-400">
-              Masalah utama bukan pada ketidaktelitian, melainkan pada alat kerja yang belum menyatu. PesantrenPro hadir untuk menyelaraskan ritme kerja lembaga Anda.
+              Masalah utama bukan pada ketidaktelitian, melainkan pada alat kerja yang belum menyatu. SanadQu hadir untuk menyelaraskan ritme kerja lembaga Anda.
           </p>
         </Reveal>
 
@@ -1275,7 +1275,7 @@ function ProblemSection() {
         <Reveal delay={0.08}>
           <div className="mt-12 rounded-2xl bg-emerald-950 p-10 text-center text-white shadow-2xl dark:bg-slate-800">
             <p className="mx-auto max-w-4xl text-2xl font-light leading-relaxed">
-              &ldquo;PesantrenPro menyatukan seluruh elemen administrasi tanpa menambah beban kerja, melainkan menggantikan cara lama yang melelahkan dengan alur yang cerdas.&rdquo;
+              &ldquo;SanadQu menyatukan seluruh elemen administrasi tanpa menambah beban kerja, melainkan menggantikan cara lama yang melelahkan dengan alur yang cerdas.&rdquo;
             </p>
           </div>
         </Reveal>
@@ -1354,13 +1354,13 @@ function DeveloperSection() {
           </h2>
           <div className="mt-10 space-y-8 text-xl font-light leading-relaxed text-slate-600 dark:text-slate-400">
             <p>
-              PesantrenPro bukan sekadar produk vendor IT biasa. Sistem ini lahir dari denyut nadi kehidupan pondok pesantren yang saya jalani setiap hari.
+              SanadQu bukan sekadar produk vendor IT biasa. Sistem ini lahir dari denyut nadi kehidupan pondok pesantren yang saya jalani setiap hari.
             </p>
             <p>
               Kami tidak menggunakan asumsi pasar. Kami menggunakan pengalaman nyata dalam menangani rekap hafalan mingguan hingga kompleksitas laporan keuangan lembaga.
             </p>
             <p>
-              Dedikasi kami adalah memastikan setiap pesantren memiliki alat yang pantas untuk menjaga marwah and masa depannya di era digital.
+              Dedikasi kami adalah memastikan setiap pesantren memiliki alat yang pantas untuk menjaga marwah dan masa depannya di era digital.
             </p>
           </div>
         </Reveal>
@@ -1381,7 +1381,7 @@ function PricingSection() {
               Implementasi yang Selaras dengan Kapasitas Pesantren.
           </h2>
           <p className="mx-auto mt-10 max-w-4xl text-xl font-light leading-relaxed text-slate-600 dark:text-slate-400">
-            Investasi PesantrenPro dirancang untuk efisiensi jangka panjang. Memungkinkan lembaga Anda memiliki sistem sekelas korporat dengan skema biaya yang menghargai operasional pesantren.
+            Investasi SanadQu dirancang untuk efisiensi jangka panjang. Memungkinkan lembaga Anda memiliki sistem sekelas korporat dengan skema biaya yang menghargai operasional pesantren.
           </p>
           <p className="mx-auto mt-6 max-w-4xl text-lg font-medium text-emerald-800 dark:text-amber-500/80 uppercase tracking-widest">
             KONSULTASI AWAL TANPA KOMITMEN.
@@ -1410,7 +1410,7 @@ function FaqSection() {
             KONSULTASI UMUM
           </Badge>
           <h2 className="text-4xl font-medium leading-tight tracking-tight sm:text-6xl">
-              Memahami PesantrenPro Lebih Dekat.
+              Memahami SanadQu Lebih Dekat.
           </h2>
         </Reveal>
 
@@ -1446,12 +1446,12 @@ export function LandingPage() {
           </div>
         </div>
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-          <a href="#top" className="flex items-center gap-4" aria-label="pesantrenPro">
+          <a href="#top" className="flex items-center gap-4" aria-label="sanadQu">
             <span className="flex size-11 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-slate-900">
-              <Image src="/pesantrenpro-mark.svg" alt="" width={44} height={44} className="size-11" priority />
+              <Image src="/sanadQu-mark.svg" alt="" width={44} height={44} className="size-11" priority />
             </span>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-slate-950 dark:text-white">pesantrenPro</span>
+              <span className="text-xl font-bold tracking-tight text-slate-950 dark:text-white">sanadQu</span>
               <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-700 dark:text-amber-500">Premium Ecosystem</span>
             </div>
           </a>
@@ -1488,59 +1488,75 @@ export function LandingPage() {
         
         <motion.div
           style={{ y: heroY }}
-          className="relative mx-auto grid min-h-[calc(100vh-8rem)] w-full max-w-7xl items-center gap-16 px-4 py-12 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8"
+          className="relative mx-auto flex min-h-[calc(100vh-8rem)] w-full max-w-7xl flex-col items-center px-4 py-20 text-center sm:px-6 lg:px-8"
         >
-          <motion.div variants={stagger} initial="hidden" animate="show" className="max-w-3xl">
+          <motion.div variants={stagger} initial="hidden" animate="show" className="flex flex-col items-center">
             <motion.div variants={fadeUp} transition={{ duration: 0.65 }}>
-              <Badge className="mb-8 border-amber-500/20 bg-amber-500/5 px-4 py-2 text-[10px] font-bold uppercase tracking-widest text-amber-700 shadow-sm backdrop-blur dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-400">
-                <Sparkles className="mr-2 size-3" />
+              <Badge className="mb-10 border-amber-500/20 bg-amber-500/5 px-5 py-2.5 text-[11px] font-bold uppercase tracking-[0.2em] text-amber-700 shadow-sm backdrop-blur dark:border-amber-500/20 dark:bg-amber-500/10 dark:text-amber-400">
+                <Sparkles className="mr-2 size-3.5" />
                 EKOSISTEM DIGITAL PESANTREN TERPADU
               </Badge>
             </motion.div>
+            
+            <motion.div 
+              variants={fadeUp} 
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="relative"
+            >
+               <p className="text-4xl font-black uppercase tracking-[0.5em] text-emerald-950 dark:text-amber-500 sm:text-6xl lg:text-7xl">
+                sanadQu
+               </p>
+            </motion.div>
+
             <motion.h1
               variants={fadeUp}
-              transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-4xl text-5xl font-medium leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl dark:text-white"
+              transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
+              className="mt-8 max-w-4xl text-4xl font-medium leading-[1.1] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl dark:text-white"
             >
               Membangun Marwah Pesantren di Era Digital.
             </motion.h1>
+            
             <motion.p
               variants={fadeUp}
-              transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
               className="mt-10 max-w-2xl text-xl font-light leading-relaxed text-slate-600 sm:text-2xl dark:text-slate-300"
             >
-              PesantrenPro menyatukan administrasi Amanah, pengawasan santri yang Khidmah, and teknologi AI yang Cerdas dalam satu ekosistem eksklusif.
+              SanadQu menyatukan administrasi Amanah, pengawasan santri yang Khidmah, dan teknologi AI yang Cerdas dalam satu ekosistem eksklusif.
             </motion.p>
-            <motion.div variants={fadeUp} className="mt-12 flex max-w-3xl flex-wrap gap-3">
+
+            <motion.div variants={fadeUp} transition={{ delay: 0.25 }} className="mt-12 flex max-w-3xl flex-wrap justify-center gap-3">
               {heroProofs.map((proof) => (
-                <div key={proof} className="rounded-full border border-slate-200 bg-white/50 px-5 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-700 shadow-sm backdrop-blur dark:border-white/5 dark:bg-white/5 dark:text-slate-300">
+                <div key={proof} className="rounded-full border border-slate-200 bg-white/50 px-5 py-2.5 text-[10px] font-bold uppercase tracking-widest text-slate-700 shadow-sm backdrop-blur dark:border-white/5 dark:bg-white/5 dark:text-slate-300">
                   {proof}
                 </div>
               ))}
             </motion.div>
-            <motion.div variants={fadeUp} className="mt-12 flex flex-col gap-4 sm:flex-row">
+
+            <motion.div variants={fadeUp} transition={{ delay: 0.3 }} className="mt-14 flex flex-col gap-4 sm:flex-row">
               <Button
                 render={<a href="#admin-panel" />}
                 nativeButton={false}
                 size="lg"
-                className="h-14 rounded-full bg-emerald-950 px-10 text-white shadow-2xl shadow-emerald-950/20 hover:bg-emerald-900 dark:bg-amber-500 dark:text-slate-950 dark:hover:bg-amber-400"
+                className="h-16 rounded-full bg-emerald-950 px-12 text-white shadow-2xl shadow-emerald-950/20 hover:bg-emerald-900 dark:bg-amber-500 dark:text-slate-950 dark:hover:bg-amber-400"
               >
                 Lihat Ekosistem
-                <ArrowRight className="ml-2 size-5" />
+                <ArrowRight className="ml-2 size-6" />
               </Button>
               <Button
                 render={<a href={whatsappDemoFullUrl} target="_blank" rel="noopener noreferrer" />}
                 nativeButton={false}
                 variant="outline"
                 size="lg"
-                className="h-14 rounded-full border-slate-200 bg-white/50 px-10 text-slate-900 shadow-sm backdrop-blur hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
+                className="h-16 rounded-full border-slate-200 bg-white/50 px-12 text-slate-900 shadow-sm backdrop-blur hover:bg-white dark:border-white/10 dark:bg-white/5 dark:text-white dark:hover:bg-white/10"
               >
                 Minta Demo Full Sistem
               </Button>
             </motion.div>
           </motion.div>
 
-          <DashboardMockup />
+          <div className="mt-24 w-full max-w-6xl">
+             <DashboardMockup />
+          </div>
         </motion.div>
       </section>
 
@@ -1559,7 +1575,7 @@ export function LandingPage() {
                 Satu sistem untuk seluruh elemen pesantren.
             </h2>
             <p className="mt-6 text-xl font-light leading-relaxed text-slate-500 dark:text-slate-400">
-                Dari meja administrasi hingga genggaman orang tua, data mengalir secara tertib, aman, and dapat dipertanggungjawabkan.
+                Dari meja administrasi hingga genggaman orang tua, data mengalir secara tertib, aman, dan dapat dipertanggungjawabkan.
             </p>
           </Reveal>
 
@@ -1632,7 +1648,7 @@ export function LandingPage() {
               </h2>
             </div>
             <p className="text-xl font-light leading-relaxed text-slate-400">
-                Setiap data santri and transaksi keuangan diperlakukan dengan standar keamanan perbankan digital. Memastikan integritas lembaga Anda terjaga secara absolut di ruang siber.
+                Setiap data santri dan transaksi keuangan diperlakukan dengan standar keamanan perbankan digital. Memastikan integritas lembaga Anda terjaga secara absolut di ruang siber.
             </p>
           </Reveal>
 
@@ -1681,7 +1697,7 @@ export function LandingPage() {
       </section>
 
       <section id="custom" className="bg-white py-32 dark:bg-slate-900">
-        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:px-8">
           <Reveal>
             <Badge variant="outline" className="mb-6 rounded-full border-emerald-500/30 px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">
                 <BadgeCheck className="mr-2 size-3" />
@@ -1691,7 +1707,7 @@ export function LandingPage() {
                 Sistem yang Beradaptasi dengan Identitas Pesantren.
             </h2>
             <p className="mt-8 text-xl font-light leading-relaxed text-slate-500 dark:text-slate-400">
-                Kami tidak memaksakan satu bentuk untuk semua. PesantrenPro dirancang agar tampil and bekerja sesuai dengan marwah, wibawa, and kebijakan internal masing-masing lembaga.
+                Kami tidak memaksakan satu bentuk untuk semua. SanadQu dirancang agar tampil dan bekerja sesuai dengan marwah, wibawa, dan kebijakan internal masing-masing lembaga.
             </p>
           </Reveal>
           <motion.div
@@ -1776,7 +1792,7 @@ export function LandingPage() {
                 Mulai Percakapan, Temukan Solusi.
             </h2>
             <p className="mt-10 text-xl font-light leading-relaxed text-white/80">
-              Ceritakan kondisi lembaga Anda. Tidak perlu memutuskan sekarang. Mari berdiskusi tentang tantangan administrasi pesantren Anda and bagaimana teknologi kami bisa membantu menyelesaikannya.
+              Ceritakan kondisi lembaga Anda. Tidak perlu memutuskan sekarang. Mari berdiskusi tentang tantangan administrasi pesantren Anda dan bagaimana teknologi kami bisa membantu menyelesaikannya.
             </p>
             
             <div className="mx-auto mt-16 grid max-w-3xl gap-4 sm:grid-cols-2">
@@ -1812,19 +1828,19 @@ export function LandingPage() {
           <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-4">
                <span className="flex size-10 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-slate-900">
-                  <Image src="/pesantrenpro-mark.svg" alt="" width={40} height={40} className="size-10" />
+                  <Image src="/sanadQu-mark.svg" alt="" width={40} height={40} className="size-10" />
                 </span>
                 <div className="flex flex-col">
-                  <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">pesantrenPro</span>
+                  <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">sanadQu</span>
                   <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-emerald-700 dark:text-amber-500">Premium Ecosystem</span>
                 </div>
             </div>
             <p className="text-sm font-medium text-slate-500 dark:text-slate-400 max-w-sm">
-              Ekosistem digital eksklusif yang dirancang untuk menjaga marwah and efisiensi operasional pondok pesantren modern.
+              Ekosistem digital eksklusif yang dirancang untuk menjaga marwah dan efisiensi operasional pondok pesantren modern.
             </p>
           </div>
           <div className="mt-16 pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-             <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 PesantrenPro. All Rights Reserved.</p>
+             <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 SanadQu. All Rights Reserved.</p>
              <div className="flex gap-8">
                 {["Terms", "Privacy", "Security"].map(item => (
                     <a key={item} href="#" className="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-emerald-800 dark:hover:text-amber-400">{item}</a>

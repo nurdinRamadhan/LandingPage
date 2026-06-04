@@ -5,7 +5,7 @@ import { useEffect, useSyncExternalStore } from "react";
 
 import { Button } from "@/components/ui/button";
 
-const themeEventName = "pesantrenpro-theme-change";
+const themeEventName = "sanadQu-theme-change";
 
 function getBrowserTheme() {
   if (typeof window === "undefined") {

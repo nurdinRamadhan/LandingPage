@@ -110,13 +110,13 @@ const stagger = {
 };
 
 export const whatsappDemoAndroidUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20aplikasi%20Android%20PesantrenPro%20untuk%20%5Bnama%20pesantren%5D";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20aplikasi%20Android%20SanadQu%20untuk%20%5Bnama%20pesantren%5D";
 
 export const whatsappDemoFullUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20full%20sistem%20PesantrenPro%20%28Admin%20Panel%20%26%20Android%29%20untuk%20%5Bnama%20pesantren%5D";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20ingin%20meminta%20demo%20full%20sistem%20SanadQu%20%28Admin%20Panel%20%26%20Android%29%20untuk%20%5Bnama%20pesantren%5D";
 
 export const whatsappConversationUrl =
-  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20%5Bnama%5D%20dari%20Pondok%20Pesantren%20%5Bnama%5D.%20Kami%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20pesantrenPro.";
+  "https://wa.me/6281804886112?text=Assalamu%27alaikum%2C%20saya%20%5Bnama%5D%20dari%20Pondok%20Pesantren%20%5Bnama%5D.%20Kami%20ingin%20mengetahui%20lebih%20lanjut%20tentang%20sanadQu.";
 
 function CardIcon({ name = "shield" }: { name?: IconName }) {
   const Icon = iconMap[name] || iconMap.shield;
@@ -164,10 +164,10 @@ export function DetailPage({ data }: { data: DetailPageData }) {
         <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-4">
             <span className="flex size-11 items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-slate-900">
-              <Image src="/pesantrenpro-mark.svg" alt="" width={44} height={44} className="size-11" priority />
+              <Image src="/sanadQu-mark.svg" alt="" width={44} height={44} className="size-11" priority />
             </span>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-tight text-slate-950 dark:text-white">pesantrenPro</span>
+              <span className="text-xl font-bold tracking-tight text-slate-950 dark:text-white">sanadQu</span>
               <span className="text-[9px] font-bold uppercase tracking-widest text-emerald-700 dark:text-amber-500">Premium Ecosystem</span>
             </div>
           </Link>
@@ -314,10 +314,10 @@ export function DetailPage({ data }: { data: DetailPageData }) {
           <div className="flex flex-col gap-10 md:flex-row md:items-center md:justify-between">
             <div className="flex items-center gap-4">
                <span className="flex size-10 items-center justify-center overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm dark:border-white/10 dark:bg-slate-900">
-                  <Image src="/pesantrenpro-mark.svg" alt="" width={40} height={40} className="size-10" />
+                  <Image src="/sanadQu-mark.svg" alt="" width={40} height={40} className="size-10" />
                 </span>
                 <div className="flex flex-col">
-                  <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">pesantrenPro</span>
+                  <span className="text-lg font-bold tracking-tight text-slate-900 dark:text-white">sanadQu</span>
                   <span className="text-[8px] font-bold uppercase tracking-[0.3em] text-emerald-700 dark:text-amber-500">Premium Ecosystem</span>
                 </div>
             </div>
@@ -326,7 +326,7 @@ export function DetailPage({ data }: { data: DetailPageData }) {
             </p>
           </div>
           <div className="mt-16 pt-8 border-t border-slate-200 dark:border-white/5 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-             <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 PesantrenPro. All Rights Reserved.</p>
+             <p className="text-[10px] font-bold uppercase tracking-widest text-slate-400">© 2026 SanadQu. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
